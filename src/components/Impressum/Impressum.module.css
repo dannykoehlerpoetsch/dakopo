@@ -1,0 +1,22 @@
+.impressum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2em 0;
+
+  span {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 1em;
+  }
+}

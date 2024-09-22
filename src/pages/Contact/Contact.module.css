@@ -1,0 +1,140 @@
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+h2,
+h3 {
+  align-self: center;
+  margin-bottom: 1em;
+}
+
+.smLinks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    padding: 0.5em;
+    font-size: 4rem;
+  }
+}
+
+.mailContact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .mailContactWrapper {
+    margin: 1em;
+    p {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+
+      a {
+        font-weight: 400;
+        text-decoration: none;
+        padding: 0;
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+.contactForm,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  form {
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 60%;
+      margin: 0.6em 0;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5em;
+        margin: 10px 0 0 0;
+        border-radius: 5px;
+        border: none;
+        border-bottom: 1px solid var(--text-color-dark);
+      }
+    }
+
+    .submitBtn {
+      padding: 0.5em 1em;
+      font-weight: bold;
+      border-radius: 99vh;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: var(--accent-color-light-1);
+      color: white;
+    }
+  }
+}
+
+.darkMode input,
+.darkMode textarea {
+  background-color: var(--background-dark-item-even);
+  color: var(--text-color-dark);
+}
+
+.lightMode input {
+  background-color: transparent;
+  background-color: #fff;
+}
+
+.successMessage {
+  background-color: green;
+  color: white;
+}
+
+.errorMessage {
+  background-color: red;
+  color: white;
+}
+
+.successMessage,
+.errorMessage {
+  padding: 2em;
+  margin: 1em 0;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.impressumBtn {
+  cursor: pointer;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+}
+
+@media (max-width: 768px) {
+  .smLinks {
+    flex-wrap: wrap;
+    a {
+      font-size: 2.5rem;
+    }
+  }
+
+  .contactForm form {
+    label {
+      width: 100%;
+    }
+  }
+}

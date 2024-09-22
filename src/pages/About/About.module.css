@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opener {
+  text-align-last: center;
+}
+
+.infoWrapper summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.infoWrapper summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.infoWrapper[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.about p {
+  margin-bottom: 10px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.about h3 {
+  margin: 20px 0;
+  cursor: pointer;
+}

@@ -1,0 +1,129 @@
+.nav {
+  height: 100%;
+  margin-top: 1em;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.nav ul li {
+  display: flex;
+  justify-content: center;
+  margin-right: 3em;
+  width: 100%;
+}
+
+.nav ul li:last-of-type {
+  margin-right: 0;
+}
+
+.link {
+  display: flex;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  transition: all 0.3s linear, transform 0.3s ease-in-out;
+
+  i {
+    margin-left: 5px;
+  }
+}
+
+.activeLink {
+  display: flex;
+  flex-wrap: nowrap;
+  color: var(--accent-color-light-1);
+  font-weight: bold;
+  text-decoration: none;
+
+  i {
+    margin-left: 5px;
+  }
+}
+
+.lightMode .link {
+  color: var(--text-color-light);
+}
+
+.lightMode .link::after,
+.darkMode .link::after {
+  content: " ";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.3s linear;
+}
+
+.lightMode .link::after,
+.darkMode .link::after {
+  background-color: var(--text-color-light);
+}
+.lightMode .link:hover::after,
+.darkMode .link:hover::after {
+  width: 100%;
+}
+
+.darkMode .link {
+  color: var(--text-color-dark);
+}
+
+.darkMode .link::after {
+  background-color: var(--text-color-dark);
+}
+
+@media (max-width: 768px) {
+  /* .nav {
+    display: none;
+  } */
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    padding: 3px 0;
+
+    transform: translateX(-100%);
+    max-height: 400px;
+  }
+  .nav.open {
+    display: flex;
+    z-index: 2;
+    transform: translateX(0);
+    transition: transform 0.5s linear;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+  }
+
+  .nav ul li {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .nav ul li a {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+  .lightMode .navList {
+    background: var(--background-color-light);
+  }
+  .darkMode .navList {
+    background: var(--background-color-dark);
+  }
+}
