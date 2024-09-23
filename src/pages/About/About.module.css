@@ -53,7 +53,7 @@ details {
 }
 
 .infoWrapper summary::marker {
-  display: "none";
+  display: none;
   content: none;
 }
 
