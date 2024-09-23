@@ -67,8 +67,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 1em;
-  transform: translateX(100%);
-  transition: transform 0.3s linear;
+
   z-index: 5;
 
   p {
@@ -95,17 +94,15 @@
 .settingsWrapper.darkMode {
   background: var(--background-color-dark);
   border: 1px solid var(--text-color-dark);
-  display: flex;
 }
 
 .settingsWrapper.lightMode {
   background: var(--background-color-light);
   border: 1px solid var(--text-color-light);
-  display: flex;
 }
 
 .settingsWrapper.openSettings {
-  transform: translateX(0);
+  display: flex;
 }
 
 .languageContainer {
