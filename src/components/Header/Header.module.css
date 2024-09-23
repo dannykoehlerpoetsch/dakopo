@@ -138,7 +138,6 @@
 
   .settingsWrapper {
     width: 100%;
-    transform: translateX(100%);
 
     div {
       width: 60%;
