@@ -51,6 +51,7 @@ export default function Links() {
               <a
                 href={project.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 title={
                   language === "de"
                     ? `${project.titleDe} besuchen`

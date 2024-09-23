@@ -3,7 +3,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
-  const { darkMode } = useContext(ThemeContext); // Zugang zum ThemeContext
+  const { darkMode } = useContext(ThemeContext);
   const year = new Date().getFullYear();
 
   return (

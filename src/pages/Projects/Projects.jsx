@@ -87,7 +87,7 @@ export default function Projects() {
                   <a
                     href={repo.html_url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" //verhindert, dass der neue Tab die Vorteile der JavaScript window.opener-Funktion nutzt
                   >
                     {repo.name}{" "}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
