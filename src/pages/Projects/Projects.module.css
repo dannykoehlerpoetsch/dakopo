@@ -8,7 +8,7 @@
 .githubLink {
   display: inline-block;
   margin: 0.5em auto;
-  color: var(--accent-color-light-1);
+
   text-decoration: none;
 }
 
@@ -91,14 +91,6 @@
   ); /* Hintergrundfarbe für ungerade Elemente */
 }
 
-.lightMode .projectList li a {
-  color: var(--accent-color-light-1);
-}
-
-.lightMode .projectList li a:hover {
-  color: var(--highlight-color-light-dark); /* Farbe für Links im Light Mode */
-}
-
 /* Dark Mode Styles */
 
 .darkMode .projectList li {
@@ -107,14 +99,6 @@
 
 .darkMode .projectList li:nth-of-type(odd) {
   background-color: #111;
-}
-
-.darkMode .projectList li a {
-  color: var(--highlight-color-dark);
-}
-
-.darkMode .projectList li a:hover {
-  color: var(--highlight-color-dark-light); /* Farbe für Links im Dark Mode */
 }
 
 /* Item background colors */

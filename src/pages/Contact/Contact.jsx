@@ -111,12 +111,11 @@ export default function Contact() {
         darkMode ? styles.darkMode : styles.lightMode
       }`}
     >
-      <h2>{language === "de" ? "Kontakt" : "Contact"}</h2>
-      <h3>
+      <h2>
         {language === "de"
           ? "Treten Sie mit mir in Kontakt"
           : "Get in contact with me!"}
-      </h3>
+      </h2>
       <div className={styles.mailContact}>
         <div className={styles.mailContactWrapper}>
           <div className={styles.smLinks}>

@@ -27,7 +27,7 @@
   display: flex;
   flex-wrap: nowrap;
   text-decoration: none;
-  transition: all 0.3s linear, transform 0.3s ease-in-out;
+  transition: all 0.3s linear;
 
   i {
     margin-left: 5px;
@@ -37,17 +37,13 @@
 .activeLink {
   display: flex;
   flex-wrap: nowrap;
-  color: var(--accent-color-light-1);
+  color: var(--secondary-color-light);
   font-weight: bold;
   text-decoration: none;
 
   i {
     margin-left: 5px;
   }
-}
-
-.lightMode .link {
-  color: var(--text-color-light);
 }
 
 .lightMode .link::after,
@@ -63,19 +59,24 @@
 
 .lightMode .link::after,
 .darkMode .link::after {
-  background-color: var(--text-color-light);
+  background-color: var(--accent-color-light-1);
 }
+
 .lightMode .link:hover::after,
 .darkMode .link:hover::after {
   width: 100%;
+}
+.lightMode .link:hover,
+.darkMode .link:hover {
+  color: var(--accent-color-light-1);
 }
 
 .darkMode .link {
   color: var(--text-color-dark);
 }
 
-.darkMode .link::after {
-  background-color: var(--text-color-dark);
+.lightMode .link {
+  color: var(--text-color-light);
 }
 
 @media (max-width: 768px) {

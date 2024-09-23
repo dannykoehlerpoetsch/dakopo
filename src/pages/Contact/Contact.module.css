@@ -20,6 +20,7 @@ h3 {
   a {
     padding: 0.5em;
     font-size: 4rem;
+    color: #99312c;
   }
 }
 
@@ -74,6 +75,12 @@ form {
         border: none;
         border-bottom: 1px solid var(--text-color-dark);
       }
+
+      input:focus,
+      textarea:focus {
+        outline-color: var(--secondary-color-light);
+        box-shadow: 0 0 10px var(--accent-color-light-1);
+      }
     }
 
     .submitBtn {
@@ -83,8 +90,12 @@ form {
       outline: none;
       border: none;
       cursor: pointer;
-      background-color: var(--accent-color-light-1);
+      background-color: var(--secondary-color-light);
       color: white;
+
+      &:hover {
+        background-color: var(--accent-color-light-1);
+      }
     }
   }
 }

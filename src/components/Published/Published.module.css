@@ -52,7 +52,7 @@
         align-self: flex-end;
         display: inline-block;
         color: white;
-        background-color: var(--accent-color-light-1);
+        background-color: var(--secondary-color-light);
         text-decoration: none;
         padding: 0.4em 1em;
         border-radius: 99vh;
@@ -60,7 +60,7 @@
         transition: background-color 0.3s linear;
 
         &:hover {
-          background-color: red;
+          background-color: var(--accent-color-light-1);
         }
       }
     }
