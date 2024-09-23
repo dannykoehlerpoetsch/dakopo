@@ -74,6 +74,10 @@ details {
   transform: rotate(90deg);
 }
 
+.infoWrapper summary::-webkit-details-marker {
+  display: none;
+}
+
 .about p {
   margin-bottom: 10px;
   text-align: justify;
