@@ -17,6 +17,10 @@
   list-style: none;
 }
 
+.infoWrapper summary::marker {
+  content: "";
+}
+
 .infoWrapper summary::before {
   content: "▶";
   display: inline-block;
