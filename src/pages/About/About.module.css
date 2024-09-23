@@ -9,6 +9,12 @@
   text-align-last: center;
 }
 
+.infoWrapper {
+  list-style: "none";
+  padding: 0;
+  margin: 0;
+}
+
 .infoWrapper summary {
   display: flex;
   align-items: center;
@@ -18,7 +24,7 @@
 }
 
 .infoWrapper summary::marker {
-  content: "";
+  display: "none";
 }
 
 .infoWrapper summary::before {
