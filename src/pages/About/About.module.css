@@ -54,7 +54,7 @@ details {
 
 .infoWrapper summary::marker {
   display: none;
-  content: none;
+  content: "";
 }
 
 .infoWrapper summary::before {
