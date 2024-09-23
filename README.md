@@ -10,7 +10,6 @@ The portfolio was created in September 2024, after I gained initial knowledge in
 
 - React-Router-Dom
 - Context API
-- GitHub API
 - Controlled Input
 - useContext
 - useState
@@ -36,7 +35,6 @@ Das Portfolio wurde im September 2024 erstellt, nachdem ich erste Kenntnisse in 
 
 - React-Router-Dom
 - Context API
-- GitHub API
 - Controlled Input
 - useContext
 - useState

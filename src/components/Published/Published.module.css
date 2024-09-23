@@ -48,19 +48,34 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      a {
-        align-self: flex-end;
-        display: inline-block;
-        color: white;
-        background-color: var(--secondary-color-light);
-        text-decoration: none;
-        padding: 0.4em 1em;
-        border-radius: 99vh;
-        margin: 1em 0 0.5em 0;
-        transition: background-color 0.3s linear;
 
-        &:hover {
-          background-color: var(--accent-color-light-1);
+      .cardLinks {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        a {
+          color: white;
+          background-color: var(--secondary-color-light);
+          text-decoration: none;
+          padding: 0.4em 1em;
+          border-radius: 99vh;
+          margin: 0 0 0 1em;
+          transition: background-color 0.3s linear;
+          &:hover {
+            background-color: var(--accent-color-light-1);
+          }
+        }
+
+        .linkToGithub {
+          background-color: transparent;
+          font-size: 2.5rem;
+          padding: 0;
+          color: var(--secondary-color-light);
+          &:hover {
+            background-color: transparent;
+            color: var(--accent-color-light-1);
+          }
         }
       }
     }

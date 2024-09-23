@@ -25,8 +25,8 @@ export default function Links() {
       </h2>
       <p className={styles.intro}>
         {language === "de"
-          ? "Hier finden Sie einen Überblick über meine veröffentlichten Projekte. Sie können die Websites besuchen um sich einen Eindruck von meiner Arbeit zu verschaffen."
-          : "Here you will find an overview of my published projects, and you can visit the websites to get an impression of my work."}
+          ? "Hier finden Sie einen Überblick über meine veröffentlichten Projekte. Sie können die Websites besuchen oder den Code direkt auf GitHub ansehen,  um sich einen Eindruck von meiner Arbeit zu verschaffen."
+          : "Here you will find an overview of my published projects, and you can visit the websites or watch the code on Github to get an impression of my work."}
       </p>
 
       <div className={styles.cardWrapper}>
@@ -48,18 +48,30 @@ export default function Links() {
             <div className={styles.cardContent}>
               <h3>{language === "de" ? project.titleDe : project.title}</h3>
               <p>{language === "de" ? project.infoDe : project.info}</p>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={
-                  language === "de"
-                    ? `${project.titleDe} besuchen`
-                    : `visit ${project.title}`
-                }
-              >
-                {language === "de" ? "jetzt ansehen" : "visit"}
-              </a>
+              <div className={styles.cardLinks}>
+                <a
+                  href={project.github}
+                  title={
+                    language === "de" ? "auf GitHub ansehen" : "watch on github"
+                  }
+                  target="_blank"
+                  className={styles.linkToGithub}
+                >
+                  <i className="fa-brands fa-square-github"></i>
+                </a>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={
+                    language === "de"
+                      ? `${project.titleDe} besuchen`
+                      : `visit ${project.title}`
+                  }
+                >
+                  {language === "de" ? "jetzt ansehen" : "visit"}
+                </a>
+              </div>
             </div>
           </div>
         ))}

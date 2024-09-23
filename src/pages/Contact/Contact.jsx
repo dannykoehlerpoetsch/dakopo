@@ -122,16 +122,29 @@ export default function Contact() {
             <a
               href="https://www.linkedin.com/in/danny-k%C3%B6hler-poetsch-6738332a5/"
               target="_blank"
+              title="LinkedIn"
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://github.com/dannykoehlerpoetsch" target="_blank">
+            <a
+              href="https://github.com/dannykoehlerpoetsch"
+              target="_blank"
+              title="GitHub"
+            >
               <i className="fa-brands fa-square-github"></i>
             </a>
-            <a href="https://www.instagram.com/da_ko_po/" target="_blank">
+            <a
+              href="https://www.instagram.com/da_ko_po/"
+              target="_blank"
+              title="Instagram"
+            >
               <i className="fa-brands fa-square-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/danny.koehler" target="_blank">
+            <a
+              href="https://www.facebook.com/danny.koehler"
+              target="_blank"
+              title="Facebook"
+            >
               <i className="fa-brands fa-facebook"></i>
             </a>
           </div>
