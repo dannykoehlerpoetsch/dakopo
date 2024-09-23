@@ -15,6 +15,12 @@
   margin: 0;
 }
 
+details {
+  list-style: none; /* Wichtig für mobile Browser */
+  padding: 0;
+  margin: 0;
+}
+
 .infoWrapper summary {
   display: flex;
   align-items: center;
@@ -25,6 +31,7 @@
 
 .infoWrapper summary::marker {
   display: "none";
+  content: none;
 }
 
 .infoWrapper summary::before {
@@ -52,4 +59,12 @@
 .about h3 {
   margin: 20px 0;
   cursor: pointer;
+}
+
+/* Safari-spezifischer Fix, um sicherzustellen, dass ::marker nicht angewendet wird */
+@supports (-webkit-touch-callout: none) {
+  details summary::marker {
+    display: none;
+    content: none;
+  }
 }
