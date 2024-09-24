@@ -39,13 +39,13 @@ export const data = [
     info: "In my free time, I am deeply involved in music – I enjoy playing guitar, bass, and drums, and I recently started learning the piano. I'm also a bit of a series addict, with a love for fantasy and horror shows and movies. I'm always up for an exciting documentary as well. Of course, I'm not just glued to my computer or TV – I love traveling and exploring different countries and cultures. It may sound strange, but I feel at home when I’m on the road.",
     titleDe: "Hobbys und Interessen",
     infoDe:
-      "In meiner Freizeit beschäftige ich mich viel mit Musik – ich spiele gerne Gitarre, Bass und Schlagzeug und habe kürzlich angefangen, Klavier zu lernen. Ich bin auch ein bisschen nach Serien, besonders liebe ich Fantasy- und Horrorshows und -filme. Eine spannende Dokumentation schaue ich mir ebenfalls gerne an. Natürlich bin ich nicht nur vor dem Computer oder Fernseher – ich liebe es, zu reisen und verschiedene Länder und Kulturen zu erkunden. Es mag seltsam klingen, aber ich fühle mich auf Reisen zu Hause.",
+      "In meiner Freizeit beschäftige ich mich viel mit Musik – ich spiele gerne Gitarre, Bass und Schlagzeug und habe kürzlich angefangen, Klavier zu lernen. Ich bin auch ein bisschen verrückt nach Serien, besonders liebe ich Fantasy- und Horrorshows und -filme. Eine spannende Dokumentation schaue ich mir ebenfalls gerne an. Natürlich bin ich nicht nur vor dem Computer oder Fernseher – ich liebe es, zu reisen und verschiedene Länder und Kulturen zu erkunden. Es mag seltsam klingen, aber ich fühle mich auf Reisen zu Hause.",
   },
   {
     title: "Fun Fact",
     info: "I love Halloween and everything that comes with it, so much so that I chose Halloween as my wedding day. I even traveled to a different state to get married, since it was a public holiday in my home state and the ceremony couldn't take place.",
     titleDe: "Fun Fact",
     infoDe:
-      "Ich liebe Halloween und alles, was dazu gehört, so sehr, dass ich Halloween als meinen Hochzeitstag gewählt habe. Ich bin sogar in ein anderes Bundesland gereist, um zu heiraten, da dieser Tag in meinem Bundesland Sachsen ein Feiertag ist und die Standesamt geschlossen hat.",
+      "Ich liebe Halloween und alles, was dazu gehört, so sehr, dass ich Halloween als meinen Hochzeitstag gewählt habe. Ich bin sogar in ein anderes Bundesland gereist, um zu heiraten, da dieser Tag in meinem Bundesland Sachsen ein Feiertag ist und das Standesamt geschlossen hat.",
   },
 ];
