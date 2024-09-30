@@ -4,12 +4,16 @@ import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Home.module.css";
 import Portrait from "../../assets/danny-start.webp";
 import Mern from "../../assets/MERN-logo.png";
+import Praktikum from "../../components/Praktikum/Praktikum";
 
 export default function Home() {
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   return (
     <section className={styles.home}>
+      <div className={styles.news}>
+        <Praktikum />
+      </div>
       <div className={styles.content}>
         <h1>Danny Köhler-Poetsch</h1>
         <h2>{language === "de" ? "Softwareentwickler" : "Web Developer"}</h2>

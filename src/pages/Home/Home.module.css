@@ -2,13 +2,18 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: 1200px;
+  width: 1400px;
 
   max-width: 100%;
 }
 
-.content {
+.content,
+.news {
   align-self: center;
+}
+
+.news {
+  margin: 1em;
 }
 
 .home .content h1,
@@ -38,7 +43,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1114px) {
   .home {
     flex-wrap: wrap;
     text-align: center;
@@ -49,6 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    order: 1;
   }
 
   .home p {
@@ -57,10 +63,15 @@
   }
 
   .home .image {
+    order: 3;
     margin: 2em auto;
     padding-bottom: 0;
     img {
       height: 40vh;
     }
+  }
+
+  .news {
+    order: 2;
   }
 }

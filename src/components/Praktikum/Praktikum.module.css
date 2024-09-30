@@ -1,0 +1,17 @@
+.internshipWrapper {
+  min-width: 300px;
+  max-width: 400px;
+  background-color: red;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+
+  h2 {
+    color: white;
+  }
+}
