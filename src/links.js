@@ -56,16 +56,4 @@ export const myProjects = [
     infoDe:
       "Dieses Projekt ist nur im Terminal auf Ihrem Computer spielbar. Folgen Sie einfach den Anweisungen in der Readme.md-Datei und genießen Sie eine Runde des Spiels.",
   },
-  {
-    title: "Magic-WebShop",
-    titleDe: "Magischer Web-Shop",
-    url: "https://magic-shop-example.vercel.app/",
-    src: magic,
-    github: "https://github.com/dannykoehlerpoetsch/magic-shop-example",
-    alt: "Screenshot from `magic webshop` products",
-    altDe: "Screenshot der Produktseite vom `magischen web shop`",
-    info: "This project is currently still in development and is constantly being updated. Feel free to check back regularly to see the progress.",
-    infoDe:
-      "Dieses Projekt ist derzeit noch in der Entwicklung und wird ständig aktualisiert. Schauen Sie gerne immer wieder vorbei, um die Fortschritte zu sehen.",
-  },
 ];
