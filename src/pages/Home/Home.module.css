@@ -33,6 +33,14 @@
   }
 }
 
+.home .content .downloadCV {
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
 .home .content .contentLogo {
   max-width: 250px;
   margin-top: 3rem;
