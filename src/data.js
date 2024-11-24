@@ -22,10 +22,10 @@ export const data = [
   },
   {
     title: "Motivation and Work Ethic",
-    info: "I neither studied at university nor obtained an Abitur (high school diploma), but this has never prevented me from achieving my goals. I approach tasks with a lot of motivation and passion and find effective solutions. I love working in teams and collaborating with others, but I am also perfectly capable of working independently. I solve tasks in a well-structured and organized manner, and even when things get stressful, I keep a cool head and stay focused.",
+    info: "While I neither attended university nor obtained a high school diploma (Abitur), I have consistently demonstrated that determination and perseverance are key to achieving one's goals. I tackle tasks with enthusiasm and dedication, always aiming to find effective solutions. I thrive in team environments and enjoy collaborating with others, yet I am equally capable of working independently. My approach to challenges is structured and organized, ensuring high-quality results even under pressure. I maintain focus and composure, regardless of how demanding the situation may become.",
     titleDe: "Motivation und Arbeitsethik",
     infoDe:
-      "Ich habe weder an einer Universität studiert noch ein Abitur gemacht, aber das hat mich nie davon abgehalten, meine Ziele zu erreichen. Ich gehe Aufgaben mit viel Motivation und Leidenschaft an und finde effektive Lösungen. Ich arbeite gerne im Team und mit anderen zusammen, bin aber auch in der Lage, eigenständig zu arbeiten. Ich löse Aufgaben strukturiert und organisiert, und selbst wenn es stressig wird, behalte ich einen kühlen Kopf und bleibe konzentriert.",
+      "Obwohl ich weder eine Universität besucht noch ein Abitur absolviert habe, habe ich stets bewiesen, dass Zielstrebigkeit und Durchhaltevermögen entscheidend für den Erfolg sind. Ich gehe Aufgaben mit Begeisterung und Engagement an und finde stets effektive Lösungen. Die Arbeit im Team und die Zusammenarbeit mit anderen bereiten mir große Freude, doch auch eigenständiges Arbeiten gelingt mir hervorragend. Herausforderungen begegne ich strukturiert und organisiert, sodass ich selbst in stressigen Situationen konzentriert und ruhig bleibe, um optimale Ergebnisse zu erzielen.",
   },
   {
     title: "Personal Qualities",
