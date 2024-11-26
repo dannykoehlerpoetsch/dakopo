@@ -12,7 +12,7 @@ export const myProjects = [
     titleDe: "Bewerbungstracker - Fullstack MERN-Projekt",
     url: "https://bewerbungstracker.onrender.com/",
     src: bewerbungstracker,
-    github: "https://github.com/dannykoehlerpoetsch/application-tracker",
+    github: "https://github.com/dannykoehlerpoetsch/bewerbungstracker",
     alt: "Screenshot from `Application Tracker` startscreen",
     altDe: "Screenshot vom Startbildschirm meines Bewerbungstrackers",
     info: "My first full-stack project using the MERN stack! The frontend is built with React, while the backend runs on an Express server connected to a MongoDB database. After registering, users can add job applications via a form. Applications can be viewed in either a detailed or list format. In the detailed view, users can update the status and add comments for each application at any time. A clear overview of all applications is available and can be downloaded as a PDF directly by the user. This PDF serves as evidence of application efforts. User data is securely stored in the database, with passwords protected through hashing to prevent misuse. For authentication, httpOnly cookies are utilized. The project is optimized for desktop browsers, particularly Google Chrome. A responsive design for mobile and tablet devices is currently in development.",
