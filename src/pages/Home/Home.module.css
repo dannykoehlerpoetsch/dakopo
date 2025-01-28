@@ -7,13 +7,8 @@
   max-width: 100%;
 }
 
-.content,
-.news {
+.content {
   align-self: center;
-}
-
-.news {
-  margin: 1em;
 }
 
 .home .content h1,
@@ -31,14 +26,6 @@
     height: 75vh;
     border-radius: 20px;
   }
-}
-
-.home .content .downloadCV {
-  text-decoration: none;
-  color: white;
-  background: red;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
 }
 
 .home .content .contentLogo {
@@ -77,9 +64,5 @@
     img {
       height: 40vh;
     }
-  }
-
-  .news {
-    order: 2;
   }
 }
