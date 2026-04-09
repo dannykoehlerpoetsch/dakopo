@@ -7,16 +7,12 @@
 
 :root {
   /* Light Mode Farben */
-  --background-color-light: linear-gradient(135deg, #f5f1e9, #e0d9c1);
-  /* --background-color-light: linear-gradient(135deg, #defaed, #ffffff); */
-  --text-color-light: #4e4a45;
-  /* --secondary-color-light: #c2783c; */
-  --accent-color-light-1: #7cb360;
-  /* --accent-color-light-1: #99312c; */
-  --secondary-color-light: #1d8934;
-
-  --accent-color-light-2: #ecdac9;
-  --highlight-color-light: #d1c1b2;
+  --background-color-light: linear-gradient(135deg, #f5f5f4, #e7e5e4);
+  --text-color-light: #292524;
+  --secondary-color-light: #b45309;
+  --accent-color-light-1: #d97706;
+  --accent-color-light-2: #f5f5f4;
+  --highlight-color-light: #e7e5e4;
 
   /* Dark Mode Farben */
   --background-color-dark: linear-gradient(135deg, #010409, #1a1d22);
