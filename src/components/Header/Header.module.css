@@ -27,7 +27,7 @@
   align-items: center;
   font-size: 1.5rem;
   border: none;
-  color: var(--highlight-color-light);
+  color: currentColor;
   cursor: pointer;
   border-radius: 50%;
   margin: 1em;

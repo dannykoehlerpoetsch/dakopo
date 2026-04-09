@@ -10,6 +10,10 @@
   padding: 1rem;
   margin: 1em auto;
 
+  h2 {
+    margin-bottom: 20px;
+  }
+
   .intro {
     text-align-last: center;
   }
