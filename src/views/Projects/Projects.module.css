@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 768px) {
+  .linksSection .intro {
+    text-align-last: left;
+  }
   .cardWrapper {
     padding: 0;
     .card {
