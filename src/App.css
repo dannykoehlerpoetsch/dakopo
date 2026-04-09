@@ -106,8 +106,7 @@ span {
   height: 100%;
   width: 1200px;
   max-width: 90vw;
-  padding: 1rem;
-  padding-top: 5rem;
+  padding: 5rem 1rem 1rem;
   margin: 0 auto;
   overflow-x: hidden;
 }

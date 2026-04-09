@@ -151,7 +151,7 @@
     padding: 10px 0;
   }
 
-  .settingsItem {
+  .nav ul li.settingsItem {
     display: flex;
   }
   .lightMode .navList {
