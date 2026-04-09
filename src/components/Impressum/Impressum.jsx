@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Impressum.module.css";
-import BackToTopLink from "../BackToTopLink/BackToTopLink";
 
 export default function Impressum() {
   const person = [
@@ -52,7 +51,6 @@ export default function Impressum() {
         is solely used to save the display and language settings and is not
         shared with third parties.
       </p>
-      <BackToTopLink />
     </div>
   );
 }

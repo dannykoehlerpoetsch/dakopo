@@ -1,10 +1,10 @@
-import dictionary from "./assets/dictionary.png";
-import scatterletter from "./assets/scatterletter.png";
-import frightful from "./assets/frightful.png";
-import textadventure from "./assets/textadventure.png";
-import portfolio from "./assets/portfolio.png";
-import bewerbungstracker from "./assets/bewerbungstracker.png";
-import magic from "./assets/magic.png";
+import dictionary from "../assets/dictionary.png";
+import scatterletter from "../assets/scatterletter.png";
+import frightful from "../assets/frightful.png";
+import textadventure from "../assets/textadventure.png";
+import portfolio from "../assets/portfolio.png";
+import bewerbungstracker from "../assets/bewerbungstracker.png";
+import magic from "../assets/magic.png";
 
 export const myProjects = [
   {

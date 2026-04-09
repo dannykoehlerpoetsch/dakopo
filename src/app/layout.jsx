@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Providers from "./providers";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import BackToTopLink from "../components/BackToTopLink/BackToTopLink";
 
 const workSans = localFont({
   src: "../assets/fonts/WorkSans-VariableFont_wght.ttf",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
           <main className="main-content">
             {children}
           </main>
+          <BackToTopLink />
           <Footer />
         </Providers>
       </body>

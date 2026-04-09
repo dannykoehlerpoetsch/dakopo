@@ -4,8 +4,7 @@ import React, { useContext } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./About.module.css";
-import { data } from "../../data";
-import BackToTopLink from "../../components/BackToTopLink/BackToTopLink";
+import { data } from "../../data/data";
 import { LanguageContext } from "../../context/LanguageContext";
 import Link from "next/link";
 
@@ -57,7 +56,6 @@ export default function About() {
         ))}
       </Accordion.Root>
 
-      <BackToTopLink />
     </section>
   );
 }
