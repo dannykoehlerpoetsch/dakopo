@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useContext } from "react";
+import Image from "next/image";
+import { FaSquareGithub } from "react-icons/fa6";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Published.module.css";
@@ -40,11 +42,14 @@ export default function Links() {
             key={index}
           >
             <div className={styles.cardImage}>
-              <img
+              <Image
                 src={project.src}
                 alt={language === "de" ? project.altDe : project.alt}
                 onClick={() => openModal(project.src)}
-                title="clik to show large image"
+                title="click to show large image"
+                width={500}
+                height={300}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className={styles.cardContent}>
@@ -59,7 +64,7 @@ export default function Links() {
                   target="_blank"
                   className={styles.linkToGithub}
                 >
-                  <i className="fa-brands fa-square-github"></i>
+                  <FaSquareGithub aria-hidden="true" />
                 </a>
                 <a
                   href={project.url}
@@ -91,10 +96,13 @@ export default function Links() {
               >
                 X
               </button>
-              <img
+              <Image
                 src={showImage}
                 alt="Selected"
                 className={styles.modalImage}
+                width={800}
+                height={600}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
           </div>

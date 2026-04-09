@@ -16,12 +16,11 @@
     text-decoration: none;
   }
   span {
-    font-family: "Splash", cursive;
+    font-family: var(--font-splash), "Splash", cursive;
     font-size: 3rem;
   }
 }
 
-.themeToggler,
 .settings {
   display: flex;
   justify-content: center;
@@ -39,21 +38,54 @@
   position: relative;
 }
 
-.themeToggler {
-  margin: 0;
-  transition: all 0.3s linear;
-  font-size: 1.2rem;
-  border-radius: 0;
-  padding: 0.2em 1em;
-  text-align: center;
-  margin-left: 2em;
-  background-color: var(--secondary-color-light);
-  color: white;
-  border-radius: 99vh;
+.darkModeContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 
-  &:hover {
-    background-color: var(--accent-color-light-1);
-  }
+.darkModeLabel {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.switchRoot {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  width: 42px;
+  height: 25px;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.switchRoot:focus-visible {
+  box-shadow: 0 0 0 2px black;
+}
+
+.switchRoot[data-state="checked"] {
+  background-color: black;
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.switchThumb {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 9999px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 100ms;
+  transform: translateX(2px);
+  will-change: transform;
+}
+
+.switchThumb[data-state="checked"] {
+  transform: translateX(20px);
 }
 
 .settingsWrapper {
@@ -71,24 +103,14 @@
   z-index: 5;
 
   p {
-    margin: 00 0 0.3em;
+    margin: 0 0 0 0.3em;
   }
 
   div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0.5em auto;
     width: 100%;
-
-    span {
-      cursor: pointer;
-      font-size: 1.5rem;
-      margin: 0 0.5em 0 2em;
-    }
-
-    span:last-of-type {
-      margin-left: 0.5em;
-    }
   }
 }
 .settingsWrapper.darkMode {
@@ -101,16 +123,23 @@
   border: 1px solid var(--text-color-light);
 }
 
+.settingsBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .settingsWrapper.openSettings {
   display: flex;
 }
 
-.languageContainer {
-  width: 50px;
+.settingsWrapper .languageContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  margin: 20px 10px;
+  gap: 0.5em;
 }
 
 .burger {
@@ -118,6 +147,26 @@
   cursor: pointer;
   font-size: 1.5rem;
   margin: 1em;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.2em 0.5em;
+  margin: 0;
+}
+
+.darkMode .langBtn {
+  color: var(--text-color-dark);
+}
+
+.lightMode .langBtn {
+  color: var(--text-color-light);
 }
 
 /* Mobile Anpassungen */
@@ -130,6 +179,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .settings {
+    display: none;
   }
 
   .headerLogo span {

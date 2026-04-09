@@ -26,24 +26,26 @@
 .link {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   transition: all 0.3s linear;
+}
 
-  i {
-    margin-left: 5px;
-  }
+.link span,
+.activeLink span {
+  display: inline-flex;
+  align-items: center;
 }
 
 .activeLink {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
   color: var(--secondary-color-light);
   font-weight: bold;
   text-decoration: none;
-
-  i {
-    margin-left: 5px;
-  }
 }
 
 .lightMode .link::after,
@@ -79,28 +81,54 @@
   color: var(--text-color-light);
 }
 
+.nav ul li.settingsItem {
+  display: none;
+}
+
+.settingsItem button {
+  background: none;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.backdrop {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  /* .nav {
-    display: none;
-  } */
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+  }
 
   .nav {
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 55px;
-    right: 0;
+    left: 0;
     width: 100%;
     padding: 3px 0;
-
-    transform: translateX(-100%);
     max-height: 400px;
+    display: none;
   }
   .nav.open {
     display: flex;
     z-index: 2;
-    transform: translateX(0);
-    transition: transform 0.5s linear;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   .nav ul {
@@ -117,9 +145,14 @@
     padding: 10px 0;
   }
 
-  .nav ul li a {
+  .nav ul li a,
+  .nav ul li button {
     font-size: 1.2rem;
     padding: 10px 0;
+  }
+
+  .settingsItem {
+    display: flex;
   }
   .lightMode .navList {
     background: var(--background-color-light);

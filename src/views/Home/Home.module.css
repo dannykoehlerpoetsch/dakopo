@@ -21,11 +21,10 @@
   color: var(--secondary-color-light);
 }
 
-.home .image {
-  img {
-    height: 75vh;
-    border-radius: 20px;
-  }
+.home .image img {
+  height: 75vh;
+  width: auto;
+  border-radius: 20px;
 }
 
 .home .content .contentLogo {
@@ -40,9 +39,9 @@
 
 @media (max-width: 1114px) {
   .home {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    justify-content: center;
   }
 
   .content {
@@ -61,8 +60,10 @@
     order: 3;
     margin: 2em auto;
     padding-bottom: 0;
-    img {
-      height: 40vh;
-    }
+  }
+
+  .home .image img {
+    height: 40vh !important;
+    width: auto !important;
   }
 }

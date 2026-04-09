@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
+import * as Accordion from "@radix-ui/react-accordion";
 import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./About.module.css";
 import { data } from "../../data";
@@ -25,7 +26,7 @@ export default function About() {
           Here, you'll discover a lot about me. Simply click on the headings to
           reveal more details. If you have any further questions, feel free to
           visit the {``}
-          <Link href="/contact">contact</Link> page and reach out!"
+          <Link href="/contact">contact</Link> page and reach out!
         </p>
       )}
 
@@ -37,14 +38,25 @@ export default function About() {
           <Link href="/contact">Kontakt</Link>-Seite und melden sich bei mir!
         </p>
       )}
-      {data.map((info, index) => (
-        <details key={index} className={styles.infoWrapper}>
-          <summary>
-            <h3>{language === "de" ? info.titleDe : info.title}</h3>
-          </summary>
-          <p>{language === "de" ? info.infoDe : info.info}</p>
-        </details>
-      ))}
+
+      <Accordion.Root type="multiple" className={styles.accordionRoot}>
+        {data.map((info, index) => (
+          <Accordion.Item key={index} value={`item-${index}`} className={styles.accordionItem}>
+            <Accordion.Header asChild>
+              <h3>
+                <Accordion.Trigger className={styles.accordionTrigger}>
+                  <span className={styles.chevron} aria-hidden="true">▶</span>
+                  {language === "de" ? info.titleDe : info.title}
+                </Accordion.Trigger>
+              </h3>
+            </Accordion.Header>
+            <Accordion.Content className={styles.accordionContent}>
+              <p>{language === "de" ? info.infoDe : info.info}</p>
+            </Accordion.Content>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+
       <BackToTopLink />
     </section>
   );

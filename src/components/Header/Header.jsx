@@ -2,6 +2,8 @@
 
 import { useContext, useState } from "react";
 import Link from "next/link";
+import { FaBars, FaXmark, FaGear } from "react-icons/fa6";
+import * as Switch from "@radix-ui/react-switch";
 import styles from "./Header.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
@@ -41,15 +43,17 @@ export default function Header() {
             <span id="top">DaKoPo</span>
           </Link>
         </div>
-        <Navigation closeMenu={closeMenu} menuOpen={menuOpen} />
-        <div
+        <Navigation closeMenu={closeMenu} menuOpen={menuOpen} toggleSettings={toggleSettings} />
+        <button
           className={`${styles.burger} ${
             darkMode ? "dark-mode" : "light-mode"
           }`}
-          onClick={() => toggleMenu()}
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
-          <i className="fa-solid fa-bars"></i>
-        </div>
+          {menuOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+        </button>
 
         <button
           className={`${styles.settings} ${
@@ -58,10 +62,17 @@ export default function Header() {
           onClick={toggleSettings}
           title={language === "de" ? "Einstellungen öffnen" : "open settings"}
         >
-          <i className="fa-solid fa-gear"></i>
+          <FaGear aria-hidden="true" />
         </button>
       </header>
 
+      {settings && (
+        <div
+          className={styles.settingsBackdrop}
+          onClick={closeSettings}
+          aria-hidden="true"
+        />
+      )}
       <div
         className={`${styles.settingsWrapper} ${
           settings ? styles.openSettings : ""
@@ -70,45 +81,44 @@ export default function Header() {
         <p>
           <b>{language === "de" ? "Einstellungen" : "Settings"}</b>
         </p>
-        <div>
-          <p>Darkmode:</p>
-          <button
-            onClick={() => {
-              handleDarkMode();
-              closeSettings();
-            }}
-            className={styles.themeToggler}
-            title={`switch to ${darkMode ? "lightmode" : "darkmode"}`}
+        <div className={styles.darkModeContainer}>
+          <label className={styles.darkModeLabel} htmlFor="darkmode-switch">
+            Darkmode:
+          </label>
+          <Switch.Root
+            id="darkmode-switch"
+            className={styles.switchRoot}
+            checked={darkMode}
+            onCheckedChange={handleDarkMode}
+            aria-label="Toggle dark mode"
           >
-            {darkMode
-              ? language === "eng"
-                ? "turn off"
-                : "ausschalten"
-              : language === "eng"
-              ? "turn on"
-              : "einschalten"}
-          </button>
+            <Switch.Thumb className={styles.switchThumb} />
+          </Switch.Root>
         </div>
-        <div>
+        <div className={styles.languageContainer}>
           <p>{language === "de" ? "Sprache:" : "Language:"}</p>
-          <span
+          <button
             onClick={() => {
               switchLanguage("de");
               closeSettings();
             }}
             title="deutsch"
+            className={styles.langBtn}
+            aria-label="Sprache auf Deutsch umschalten"
           >
-            🇩🇪
-          </span>
-          <span
+            <span className="fi fi-de" aria-hidden="true"></span>
+          </button>
+          <button
             onClick={() => {
               switchLanguage("eng");
               closeSettings();
             }}
             title="english"
+            className={styles.langBtn}
+            aria-label="Switch language to English"
           >
-            🇬🇧
-          </span>
+            <span className="fi fi-gb" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </>
