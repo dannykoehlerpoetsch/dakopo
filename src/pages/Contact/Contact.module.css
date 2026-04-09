@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: flex-start;
 }
-h2,
-h3 {
+.contactWrapper h2,
+.contactWrapper h3 {
   align-self: center;
   margin-bottom: 1em;
 }
@@ -49,8 +49,7 @@ h3 {
   }
 }
 
-.contactForm,
-form {
+.contactForm {
   display: flex;
   flex-direction: column;
   justify-content: center;

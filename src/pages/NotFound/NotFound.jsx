@@ -1,23 +1,25 @@
+"use client";
+
 import React, { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Image from "../../assets/404.jpg";
+import { useRouter } from "next/navigation";
+import NotFoundImage from "../../assets/404.jpg";
 import styles from "./NotFound.module.css";
 import { LanguageContext } from "../../context/LanguageContext";
 
 export default function NotFound() {
   const { language } = useContext(LanguageContext);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/");
+      router.push("/");
     }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
   return (
     <div className={styles.foundWrapper}>
-      <img src={Image} alt="" />
+      <img src={NotFoundImage.src} alt="" />
       <h1>
         {language === "de"
           ? "Die gesuchte Seite existiert nicht."

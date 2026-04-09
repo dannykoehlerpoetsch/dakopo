@@ -1,7 +1,10 @@
+"use client";
+
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Navigation.module.css";
 
 export default function Navigation({ closeMenu, menuOpen }) {
@@ -13,19 +16,19 @@ export default function Navigation({ closeMenu, menuOpen }) {
       nameDe: "Start",
     },
     {
-      path: "about",
+      path: "/about",
       classname: "fa-solid fa-circle-info",
       name: "About",
       nameDe: "Info",
     },
     {
-      path: "projects",
+      path: "/projects",
       classname: "fa-brands fa-github",
       name: "Projects",
       nameDe: "Projekte",
     },
     {
-      path: "contact",
+      path: "/contact",
       classname: "fa-solid fa-address-card",
       name: "Contact",
       nameDe: "Kontakt",
@@ -33,6 +36,7 @@ export default function Navigation({ closeMenu, menuOpen }) {
   ];
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
+  const pathname = usePathname();
 
   return (
     <nav
@@ -45,20 +49,21 @@ export default function Navigation({ closeMenu, menuOpen }) {
           darkMode ? styles.darkMode : styles.lightMode
         }`}
       >
-        {links.map((link, index) => (
-          <li key={index}>
-            <NavLink
-              to={link.path}
-              onClick={closeMenu}
-              className={({ isActive }) =>
-                isActive ? styles.activeLink : styles.link
-              }
-            >
-              {language === "eng" ? link.name : link.nameDe}{" "}
-              <i className={link.classname}></i>
-            </NavLink>
-          </li>
-        ))}
+        {links.map((link, index) => {
+          const isActive = pathname === link.path;
+          return (
+            <li key={index}>
+              <Link
+                href={link.path}
+                onClick={closeMenu}
+                className={isActive ? styles.activeLink : styles.link}
+              >
+                {language === "eng" ? link.name : link.nameDe}{" "}
+                <i className={link.classname}></i>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
