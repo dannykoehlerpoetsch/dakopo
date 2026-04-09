@@ -28,8 +28,8 @@ export default function Projects() {
       </h2>
       <p className={styles.intro}>
         {language === "de"
-          ? "Hier finden Sie einen Überblick über meine veröffentlichten Projekte. Sie können die Websites besuchen oder den Code direkt auf GitHub ansehen,  um sich einen Eindruck von meiner Arbeit zu verschaffen."
-          : "Here you will find an overview of my published projects, and you can visit the websites or watch the code on Github to get an impression of my work."}
+          ? "Hier finden Sie eine Auswahl meiner privaten Projekte. Sie können die Websites besuchen oder den Code direkt auf GitHub ansehen. Beruflich habe ich darüber hinaus weitere Projekte umgesetzt, die ich aus Datenschutzgründen hier leider nicht zeigen darf."
+          : "Here you will find a selection of my personal projects. You can visit the websites or view the code on GitHub. In my professional career, I have completed more projects which I am unfortunately unable to showcase here for data protection reasons."}
       </p>
 
       <div className={styles.cardWrapper}>

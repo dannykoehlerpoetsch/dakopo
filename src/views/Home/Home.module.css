@@ -21,21 +21,8 @@
   color: var(--secondary-color-light);
 }
 
-.home .image img {
-  height: 75vh;
-  width: auto;
-  border-radius: 20px;
-}
 
-.home .content .contentLogo {
-  max-width: 250px;
-  margin-top: 3rem;
 
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
-}
 
 @media (max-width: 1114px) {
   .home {

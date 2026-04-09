@@ -6,8 +6,6 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Home.module.css";
 import Portrait from "../../assets/danny-start.webp";
-import Mern from "../../assets/MERN-logo.png";
-import Praktikum from "../../components/Praktikum/Praktikum";
 
 export default function Home() {
   const { darkMode } = useContext(ThemeContext);
@@ -16,12 +14,8 @@ export default function Home() {
     <section className={styles.home}>
       <div className={styles.content}>
         <h1>Danny Köhler-Poetsch</h1>
-        <h2>{language === "de" ? "Softwareentwickler" : "Web Developer"}</h2>
+        <h2>{language === "de" ? "Frontendentwickler" : "Frontend Developer"}</h2>
         <p>Leipzig{language === "de" ? "" : ", Germany"}</p>
-
-        <div className={styles.contentLogo}>
-          <Image src={Mern} alt="mern-stack logo" width={250} height={100} style={{ width: "auto", height: "auto" }} />
-        </div>
       </div>
       <div className={styles.image}>
         <Image

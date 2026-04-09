@@ -4,9 +4,20 @@ import frightful from "../assets/frightful.png";
 import textadventure from "../assets/textadventure.png";
 import portfolio from "../assets/portfolio.png";
 import bewerbungstracker from "../assets/bewerbungstracker.png";
-import magic from "../assets/magic.png";
+import dogcards from "../assets/dogcards.png";
 
 export const myProjects = [
+  {
+    title: "DogCards - Digital Card Draw for Dog",
+    titleDe: "DogCards - Digitales Kartenziehen für Dog",
+    url: "https://dogcards.vercel.app/",
+    src: dogcards,
+    github: "https://github.com/dannykoehlerpoetsch/dogcards",
+    alt: "Screenshot from DogCards app",
+    altDe: "Screenshot der DogCards-App",
+    info: "A Next.js web app designed for two-player rounds of the board game 'Dog – den Letzten beißen die Hunde'. It replaces the physical card deck with a digital card draw, making it easy to play anytime without needing the actual cards.",
+    infoDe: "Eine Next.js-Webapp für Zweierspielrunden des Brettspiels 'Dog – den Letzten beißen die Hunde'. Sie ersetzt das physische Kartendeck durch ein digitales Kartenziehen und ermöglicht so unkompliziertes Spielen – auch ohne die echten Karten.",
+  },
   {
     title: "Application Tracker - Fullstack MERN-Projekt",
     titleDe: "Bewerbungstracker - Fullstack MERN-Projekt",
@@ -20,16 +31,16 @@ export const myProjects = [
       "Mein erstes Fullstack-Projekt mit dem MERN-Stack! Das Frontend wurde mit React umgesetzt, während das Backend auf einem Express-Server läuft und mit einer MongoDB-Datenbank verbunden ist. Nach der Registrierung können Nutzer Bewerbungen über ein Formular hinzufügen. Diese Bewerbungen können in einer detaillierten Ansicht oder als Listenübersicht angezeigt werden. In der Detailansicht lassen sich der Status und Kommentare zu einzelnen Bewerbungen jederzeit bearbeiten. Eine übersichtliche Liste aller Bewerbungen kann direkt als PDF heruntergeladen werden, um beispielsweise als Nachweis der eigenen Bewerbungsaktivitäten zu dienen. Die Nutzerdaten werden sicher in der Datenbank gespeichert, wobei Passwörter durch Hashing vor Missbrauch geschützt sind. Zur Authentifizierung werden httpOnly-Cookies verwendet. Das Projekt ist für den Einsatz in Desktop-Browsern, insbesondere Google Chrome, optimiert. Ein responsives Design für mobile und Tablet-Geräte ist derzeit in Arbeit.",
   },
   {
-    title: "DaKoPo - my Portfolio in React",
-    titleDe: "DaKoPo - mein Portfolio in React",
+    title: "DaKoPo - my Portfolio",
+    titleDe: "DaKoPo - mein Portfolio",
     url: "https://dakopo.vercel.app/",
     src: portfolio,
     github: "https://github.com/dannykoehlerpoetsch/dakopo",
     alt: "Screenshot from `DaKoPo` startscreen",
     altDe: "Screenshot vom Startbildschirm meines Portfolios",
-    info: "This portfolio is also one of my projects and was developed using React. It features responsive design, the option to switch between dark and light mode, as well as language selection.",
+    info: "This portfolio was originally built with React and later migrated to Next.js for improved performance and SEO. It features responsive design, dark and light mode, as well as language selection.",
     infoDe:
-      "Auch dieses Portfolio ist ein Projekt von mir und wurde in React programmiert. Responsive Design sowie die Auswahl zwischen Dark - & Lightmode und die Auswahl der Sprache sind implementiert. ",
+      "Dieses Portfolio wurde ursprünglich mit React entwickelt und anschließend zu Next.js migriert, um Performance und SEO zu verbessern. Es bietet responsives Design, Dark- und Lightmode sowie eine Sprachauswahl.",
   },
   {
     title: "ScatterLetter - generate random letters",
