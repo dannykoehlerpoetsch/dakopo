@@ -31,19 +31,22 @@
 
   .mailContactWrapper {
     margin: 1em;
-    p {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    .emailBtn {
+      padding: 0.5em 1.5em;
+      font-size: 1rem;
       font-weight: bold;
+      border-radius: 99vh;
+      border: none;
+      cursor: pointer;
+      background-color: var(--secondary-color-light);
+      color: white;
+      margin: 1em 0;
+      transition: background-color 0.3s linear;
 
-      a {
-        font-weight: 400;
-        text-decoration: none;
-        padding: 0;
-        margin: 1em 0;
+      &:hover {
+        background-color: var(--accent-color-light-1);
       }
     }
   }
@@ -150,6 +153,8 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+
 
 .impressumBtn {
   cursor: pointer;

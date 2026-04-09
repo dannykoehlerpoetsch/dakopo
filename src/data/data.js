@@ -1,24 +1,24 @@
 export const data = [
   {
-    title: "Programming Languages",
-    info: "I am currently learning the MERN Stack, which consists of MongoDB, Express.js, React, and Node.js. It is a powerful full-stack JavaScript framework used for building dynamic web applications.",
-    titleDe: "Programmiersprachen",
+    title: "Technologies",
+    info: "I work with JavaScript, React, Next.js, Node.js, Express.js and MongoDB (MERN Stack), as well as HTML5, CSS3, SASS and Tailwind CSS. In addition, I develop standard and custom Lightning Web Components (LWC) with SLDS in the Salesforce ecosystem.",
+    titleDe: "Technologien",
     infoDe:
-      "Ich lerne derzeit den MERN-Stack, der aus MongoDB, Express.js, React und Node.js besteht. Es ist ein leistungsstarkes Full-Stack-JavaScript-Framework, das für den Aufbau dynamischer Webanwendungen verwendet wird.",
+      "Ich arbeite mit JavaScript, React, Next.js, Node.js, Express.js und MongoDB (MERN-Stack) sowie HTML5, CSS3, SASS und Tailwind CSS. Darüber hinaus entwickle ich Standard- und Custom Lightning Web Components (LWC) mit SLDS im Salesforce-Ökosystem.",
   },
   {
     title: "Professional Background",
-    info: "From 2011 to 2023, I worked as a technical laboratory assistant in the field of microbiology. Unfortunately, I wasn't able to fully utilize all of my skills in this role, which led me to pursue a career in web development to help shape the digital future. I am currently enrolled in the Web and Software Development course at the DCI - Digital Career Institute, where I serve as both class representative and tutor. Thanks to my quick learning ability and talent for simplifying complex topics, I have already started earning money as a tutor during the course.",
+    info: "Since 2025, I have been working as a frontend developer at a digital agency, where I build exciting B2B projects using various technologies. Before that, from 2011 to 2023, I worked as a technical laboratory assistant in the field of microbiology. Unfortunately, I wasn't able to fully utilize all of my skills in this role, which led me to pursue a career in web development to help shape the digital future. I then enrolled in the Web and Software Development course at the DCI - Digital Career Institute, where I served as both class representative and tutor. Thanks to my quick learning ability and talent for simplifying complex topics, I already started earning money as a tutor during the course.",
     titleDe: "Beruflicher Hintergrund",
     infoDe:
-      "Von 2011 bis 2023 arbeitete ich als technischer Laborassistent im Bereich Mikrobiologie. Leider konnte ich in dieser Rolle nicht all meine Fähigkeiten vollständig einsetzen, was mich dazu veranlasste, eine Karriere in der Webentwicklung zu verfolgen, um die digitale Zukunft mitzugestalten. Derzeit bin ich im Kurs für Web- und Softwareentwicklung am DCI - Digital Career Institute eingeschrieben, wo ich sowohl als Klassensprecher als auch als Tutor tätig bin. Dank meiner schnellen Auffassungsgabe und meines Talents, komplexe Themen zu vereinfachen, habe ich bereits während des Kurses angefangen, als Tutor Geld zu verdienen.",
+      "Seit 2025 arbeite ich als Frontendentwickler in einer Digitalagentur, wo ich an spannenden Projekten im B2B-Bereich mit verschiedenen Technologien arbeite. Zuvor war ich von 2011 bis 2023 als technischer Laborassistent im Bereich Mikrobiologie tätig. Leider konnte ich in dieser Rolle nicht all meine Fähigkeiten vollständig einsetzen, was mich dazu veranlasste, eine Karriere in der Webentwicklung zu verfolgen, um die digitale Zukunft mitzugestalten. Daraufhin schrieb ich mich im Kurs für Web- und Softwareentwicklung am DCI - Digital Career Institute ein, wo ich sowohl als Klassensprecher als auch als Tutor tätig war. Dank meiner schnellen Auffassungsgabe und meines Talents, komplexe Themen zu vereinfachen, habe ich bereits während des Kurses angefangen, als Tutor Geld zu verdienen.",
   },
   {
     title: "Languages",
-    info: "I speak German as my native language and English at a B2 level. I am also actively taking English lessons to reach a C1 level.",
+    info: "I speak German as my native language and English at a B2 level.",
     titleDe: "Sprachen",
     infoDe:
-      "Ich spreche Deutsch als Muttersprache und Englisch auf B2-Niveau. Ich nehme derzeit aktiv Englischunterricht, um das C1-Niveau zu erreichen.",
+      "Ich spreche Deutsch als Muttersprache und Englisch auf B2-Niveau.",
   },
   {
     title: "Motivation and Work Ethic",

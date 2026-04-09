@@ -7,7 +7,7 @@ export default function Impressum() {
     { title: "Straße / street: ", value: " Erich-Zeigner-Allee 89" },
     { title: "PLZ, Ort / ZIP, city: ", value: " 04229, Leipzig" },
     { title: "Land / country: ", value: " Deutschland" },
-    { title: "E-Mail: ", value: " danny_koehler-poetsch@gmx.net" },
+    { title: "E-Mail: ", value: " dakopo-coding@gmx.net" },
     { title: "Telefon / phone: ", value: " 0177 808 73 70" },
   ];
 

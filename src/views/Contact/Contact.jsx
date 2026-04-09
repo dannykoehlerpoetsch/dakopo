@@ -112,7 +112,7 @@ export default function Contact() {
       } else {
         setError(
           language === "de"
-            ? "Etwas ist schiefgalaufen. Bitte versuchen Sie es später erneut"
+            ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
             : "Something went wrong. Please try again later."
         );
       }
@@ -120,7 +120,7 @@ export default function Contact() {
       console.error("Error submitting the form", err);
       setError(
         language === "de"
-          ? "Etwas ist schiefgalaufen. Bitte versuchen Sie es später erneut"
+          ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
           : "Something went wrong. Please try again later."
       );
     } finally {
@@ -163,22 +163,21 @@ export default function Contact() {
             >
               <FaSquareInstagram aria-hidden="true" />
             </a>
-            <a
-              href="https://www.facebook.com/danny.koehler"
-              target="_blank"
-              title="Facebook"
-            >
-              <FaFacebook aria-hidden="true" />
-            </a>
           </div>
-          <p>
-            E-Mail:{" "}
-            <a href="mailto:danny_koehler-poetsch@gmx.net">
-              Danny_Koehler-Poetsch@gmx.net
-            </a>
-          </p>
+          <button
+            className={styles.emailBtn}
+            onClick={() => {
+              const user = "dakopo-coding";
+              const domain = "gmx.net";
+              window.location.href = `mailto:${user}@${domain}`;
+            }}
+          >
+            {language === "de" ? "E-Mail senden" : "Send E-Mail"}
+          </button>
         </div>
       </div>
+
+      <p>{language === "de" ? "oder" : "or"}</p>
 
       <div className={styles.contactForm}>
         <h3>

@@ -5,7 +5,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaHouse, FaCircleInfo, FaGithub, FaAddressCard, FaGear } from "react-icons/fa6";
+import { FaHouse, FaCircleInfo, FaGithub, FaAddressCard, FaGear, FaCubesStacked } from "react-icons/fa6";
 import styles from "./Navigation.module.css";
 
 export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
@@ -27,6 +27,12 @@ export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
       icon: <FaGithub />,
       name: "Projects",
       nameDe: "Projekte",
+    },
+    {
+      path: "/tech-stack",
+      icon: <FaCubesStacked />,
+      name: "Technologies",
+      nameDe: "Technologien",
     },
     {
       path: "/contact",
