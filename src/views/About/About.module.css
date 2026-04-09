@@ -1,106 +1,89 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .opener {
-  -moz-text-align-last: center;
   text-align-last: center;
-}
-
-.infoWrapper {
-  list-style: "none";
-  padding: 0;
-  margin: 0;
-}
-
-.infoWrapper {
-  list-style: none; /* Wichtig für mobile Browser */
-  padding: 0;
-  margin: 0;
-}
-
-.infoWrapper summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  list-style: none;
-}
-
-.infoWrapper summary::marker {
-  display: none;
-  content: "";
-}
-
-.infoWrapper summary::before {
-  content: "▶";
-  display: inline-block;
-  margin-right: 10px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.infoWrapper[open] summary::before {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.infoWrapper summary::-webkit-details-marker {
-  display: none;
 }
 
 .about p {
   margin-bottom: 10px;
-  text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
 }
 
 .about h2 {
   margin-bottom: 20px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .about h3 {
-  margin: 20px 0;
-  cursor: pointer;
+  margin: 0;
 }
 
-/* Safari-spezifischer Fix, um sicherzustellen, dass ::marker nicht angewendet wird */
-@supports (-webkit-touch-callout: none) {
-  .infoWrapper summary::marker {
-    display: none;
-    content: none;
+.accordionRoot {
+  width: 100%;
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.accordionTrigger {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  gap: 10px;
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 0.7em;
+  transition: transform 0.3s ease-out;
+}
+
+.accordionTrigger[data-state="open"] .chevron {
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  text-align: left;
+}
+
+.accordionContent[data-state="open"] {
+  animation: slideDown 0.3s ease-out;
+}
+
+.accordionContent[data-state="closed"] {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
   }
 }

@@ -25,16 +25,14 @@ export default function Impressum() {
         German Interstate Broadcasting Treaty (RStV):
       </p>
       <ul>
-        <li>
-          {person.map((data, index) => (
-            <li key={index}>
-              <span>
-                <b>{data.title}</b>
-              </span>
-              {data.value}
-            </li>
-          ))}
-        </li>
+        {person.map((data, index) => (
+          <li key={index}>
+            <span>
+              <b>{data.title}</b>
+            </span>
+            {data.value}
+          </li>
+        ))}
       </ul>
       <h3>Datenschutz</h3>
       <p>

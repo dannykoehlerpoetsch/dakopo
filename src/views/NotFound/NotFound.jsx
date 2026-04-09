@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import NotFoundImage from "../../assets/404.jpg";
 import styles from "./NotFound.module.css";
@@ -19,7 +20,7 @@ export default function NotFound() {
   }, []);
   return (
     <div className={styles.foundWrapper}>
-      <img src={NotFoundImage.src} alt="" />
+      <Image src={NotFoundImage} alt="Page not found" width={400} height={300} />
       <h1>
         {language === "de"
           ? "Die gesuchte Seite existiert nicht."

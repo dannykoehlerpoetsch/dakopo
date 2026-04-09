@@ -5,31 +5,32 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaHouse, FaCircleInfo, FaGithub, FaAddressCard, FaGear } from "react-icons/fa6";
 import styles from "./Navigation.module.css";
 
-export default function Navigation({ closeMenu, menuOpen }) {
+export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
   const links = [
     {
       path: "/",
-      classname: "fa-solid fa-house",
+      icon: <FaHouse />,
       name: "Home",
       nameDe: "Start",
     },
     {
       path: "/about",
-      classname: "fa-solid fa-circle-info",
+      icon: <FaCircleInfo />,
       name: "About",
       nameDe: "Info",
     },
     {
       path: "/projects",
-      classname: "fa-brands fa-github",
+      icon: <FaGithub />,
       name: "Projects",
       nameDe: "Projekte",
     },
     {
       path: "/contact",
-      classname: "fa-solid fa-address-card",
+      icon: <FaAddressCard />,
       name: "Contact",
       nameDe: "Kontakt",
     },
@@ -39,32 +40,52 @@ export default function Navigation({ closeMenu, menuOpen }) {
   const pathname = usePathname();
 
   return (
-    <nav
-      className={`${styles.nav} ${menuOpen ? styles.open : ""} ${
-        darkMode ? styles.darkMode : styles.lightMode
-      }`}
-    >
-      <ul
-        className={`${styles.navList} ${
+    <>
+      {menuOpen && (
+        <div className={styles.backdrop} onClick={closeMenu} aria-hidden="true" />
+      )}
+      <nav
+        className={`${styles.nav} ${menuOpen ? styles.open : ""} ${
           darkMode ? styles.darkMode : styles.lightMode
         }`}
+        role="navigation"
+        aria-label="Main navigation"
       >
-        {links.map((link, index) => {
-          const isActive = pathname === link.path;
-          return (
-            <li key={index}>
-              <Link
-                href={link.path}
-                onClick={closeMenu}
-                className={isActive ? styles.activeLink : styles.link}
-              >
-                {language === "eng" ? link.name : link.nameDe}{" "}
-                <i className={link.classname}></i>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+        <ul
+          className={`${styles.navList} ${
+            darkMode ? styles.darkMode : styles.lightMode
+          }`}
+        >
+          {links.map((link, index) => {
+            const isActive = pathname === link.path;
+            return (
+              <li key={index}>
+                <Link
+                  href={link.path}
+                  onClick={closeMenu}
+                  className={isActive ? styles.activeLink : styles.link}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {language === "eng" ? link.name : link.nameDe}{" "}
+                  <span aria-hidden="true">{link.icon}</span>
+                </Link>
+              </li>
+            );
+          })}
+          <li className={styles.settingsItem}>
+            <button
+              className={styles.link}
+              onClick={() => {
+                closeMenu();
+                toggleSettings();
+              }}
+            >
+              {language === "de" ? "Einstellungen" : "Settings"}{" "}
+              <span aria-hidden="true"><FaGear /></span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }

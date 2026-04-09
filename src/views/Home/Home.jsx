@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
+import Image from "next/image";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Home.module.css";
@@ -19,16 +20,19 @@ export default function Home() {
         <p>Leipzig{language === "de" ? "" : ", Germany"}</p>
 
         <div className={styles.contentLogo}>
-          <img src={Mern.src} alt="mern-stack logo" />
+          <Image src={Mern} alt="mern-stack logo" width={250} height={100} style={{ width: "auto", height: "auto" }} />
         </div>
       </div>
       <div className={styles.image}>
-        <img
+        <Image
           className={darkMode ? styles.darkMode : styles.lightMode}
-          src={Portrait.src}
+          src={Portrait}
           alt="Picture from Danny Köhler-Poetsch"
           title="Hi, I'm Danny Köhler-Poetsch!"
-          loading="eager"
+          priority
+          width={400}
+          height={600}
+          style={{ width: "auto", height: "75vh", borderRadius: "20px" }}
         />
       </div>
     </section>

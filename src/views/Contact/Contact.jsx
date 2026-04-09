@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useId, useState, useContext } from "react";
+import React, { useId, useState, useContext, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { FaLinkedin, FaSquareGithub, FaSquareInstagram, FaFacebook } from "react-icons/fa6";
 import styles from "./Contact.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import Impressum from "../../components/Impressum/Impressum";
 
 export default function Contact() {
-  const id = useId();
+  const nameId = useId();
+  const emailId = useId();
+  const messageId = useId();
   const router = useRouter();
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
@@ -16,8 +19,27 @@ export default function Contact() {
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showImpressum, setShowImpressum] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const countdownRef = useRef(null);
+
+  useEffect(() => {
+    if (submitted) {
+      countdownRef.current = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev <= 1) {
+            clearInterval(countdownRef.current);
+            router.push("/");
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+      return () => clearInterval(countdownRef.current);
+    }
+  }, [submitted, router]);
 
   const handleChange = (e) => {
     setError("");
@@ -67,6 +89,7 @@ export default function Contact() {
 
     setError("");
     setSubmitted(false);
+    setLoading(true);
 
     try {
       const response = await fetch("https://formspree.io/f/xyzganan", {
@@ -86,10 +109,6 @@ export default function Contact() {
         setName("");
         setMail("");
         setMessage("");
-
-        setTimeout(() => {
-          router.push("/");
-        }, 5000);
       } else {
         setError(
           language === "de"
@@ -97,13 +116,15 @@ export default function Contact() {
             : "Something went wrong. Please try again later."
         );
       }
-    } catch (error) {
-      console.error("Error submitting the form", error);
+    } catch (err) {
+      console.error("Error submitting the form", err);
       setError(
         language === "de"
           ? "Etwas ist schiefgalaufen. Bitte versuchen Sie es später erneut"
           : "Something went wrong. Please try again later."
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -126,28 +147,28 @@ export default function Contact() {
               target="_blank"
               title="LinkedIn"
             >
-              <i className="fa-brands fa-linkedin"></i>
+              <FaLinkedin aria-hidden="true" />
             </a>
             <a
               href="https://github.com/dannykoehlerpoetsch"
               target="_blank"
               title="GitHub"
             >
-              <i className="fa-brands fa-square-github"></i>
+              <FaSquareGithub aria-hidden="true" />
             </a>
             <a
               href="https://www.instagram.com/da_ko_po/"
               target="_blank"
               title="Instagram"
             >
-              <i className="fa-brands fa-square-instagram"></i>
+              <FaSquareInstagram aria-hidden="true" />
             </a>
             <a
               href="https://www.facebook.com/danny.koehler"
               target="_blank"
               title="Facebook"
             >
-              <i className="fa-brands fa-facebook"></i>
+              <FaFacebook aria-hidden="true" />
             </a>
           </div>
           <p>
@@ -171,12 +192,12 @@ export default function Contact() {
             action="https://formspree.io/f/xyzganan"
             onSubmit={handleSubmit}
           >
-            <label htmlFor={id}>
+            <label htmlFor={nameId}>
               Name:
               <input
                 type="text"
                 name="name"
-                id={id}
+                id={nameId}
                 placeholder={
                   language === "de" ? "Max Mustermann" : "example: `John Doe`"
                 }
@@ -186,12 +207,12 @@ export default function Contact() {
                 className={darkMode ? styles.darkMode : styles.lightMode}
               />
             </label>
-            <label htmlFor={id}>
+            <label htmlFor={emailId}>
               E-Mail:
               <input
                 type="email"
                 name="email"
-                id={id}
+                id={emailId}
                 placeholder={
                   language === "de"
                     ? "Max-Mustermann@mail.de"
@@ -202,11 +223,11 @@ export default function Contact() {
                 onChange={handleChange}
               />
             </label>
-            <label htmlFor={id}>
+            <label htmlFor={messageId}>
               {language === "de" ? "Ihre Nachricht" : "Your message"}
               <textarea
                 name="message"
-                id={id}
+                id={messageId}
                 rows="10"
                 cols="33"
                 placeholder={
@@ -224,20 +245,25 @@ export default function Contact() {
               title={
                 language === "de" ? "Nachricht absenden" : "submit your message"
               }
+              disabled={loading}
             >
-              {language === "de" ? "absenden" : "send message"}
+              {loading
+                ? (language === "de" ? "Wird gesendet..." : "Sending...")
+                : (language === "de" ? "absenden" : "send message")}
             </button>
           </form>
         )}
 
-        {error && <p className={styles.errorMessage}>{error}</p>}
-        {submitted && (
-          <p className={styles.successMessage}>
-            {language === "de"
-              ? "Nachricht erfolgreich verschickt. Sie werden in wenigen Sekunden auf die Startseite weitergeleitet. Vielen Dank!"
-              : " Message sent successfully! You will be redirected to the homepage shortly. Thank you!"}
-          </p>
-        )}
+        <div aria-live="polite" role="status">
+          {error && <p className={styles.errorMessage}>{error}</p>}
+          {submitted && (
+            <p className={styles.successMessage}>
+              {language === "de"
+                ? `Nachricht erfolgreich verschickt. Weiterleitung in ${countdown}s. Vielen Dank!`
+                : `Message sent successfully! Redirecting in ${countdown}s. Thank you!`}
+            </p>
+          )}
+        </div>
       </div>
       <button
         className={styles.impressumBtn}

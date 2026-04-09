@@ -1,7 +1,21 @@
 import "../App.css";
+import "flag-icons/css/flag-icons.min.css";
+import localFont from "next/font/local";
 import Providers from "./providers";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+
+const workSans = localFont({
+  src: "../assets/fonts/WorkSans-VariableFont_wght.ttf",
+  variable: "--font-work-sans",
+  display: "swap",
+});
+
+const splash = localFont({
+  src: "../assets/fonts/Splash-Regular.ttf",
+  variable: "--font-splash",
+  display: "swap",
+});
 
 export const metadata = {
   title: "DaKoPo Portfolio",
@@ -30,17 +44,22 @@ export const metadata = {
   },
 };
 
+const darkModeScript = `
+  (function() {
+    try {
+      var stored = localStorage.getItem('darkMode');
+      if (stored === 'true') {
+        document.documentElement.classList.add('dark-mode-preload');
+      }
+    } catch(e) {}
+  })();
+`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${workSans.variable} ${splash.variable}`} suppressHydrationWarning>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
+        <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
       </head>
       <body>
         <Providers>
