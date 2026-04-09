@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";

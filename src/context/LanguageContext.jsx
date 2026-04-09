@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useState, useEffect } from "react";
 
 export const LanguageContext = createContext();
@@ -8,7 +10,7 @@ export default function LanguageProvider({ children }) {
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
 
-    if (language) {
+    if (savedLanguage) {
       setLanguage(savedLanguage);
     }
   }, []);

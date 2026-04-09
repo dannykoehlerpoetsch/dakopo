@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useId, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import styles from "./Contact.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
@@ -7,7 +9,7 @@ import Impressum from "../../components/Impressum/Impressum";
 
 export default function Contact() {
   const id = useId();
-  const navigate = useNavigate();
+  const router = useRouter();
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const [name, setName] = useState("");
@@ -86,7 +88,7 @@ export default function Contact() {
         setMessage("");
 
         setTimeout(() => {
-          navigate("/");
+          router.push("/");
         }, 5000);
       } else {
         setError(

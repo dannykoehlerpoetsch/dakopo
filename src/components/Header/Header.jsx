@@ -1,5 +1,7 @@
+"use client";
+
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import styles from "./Header.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
@@ -35,9 +37,9 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.headerLogo}>
-          <NavLink to="/">
+          <Link href="/">
             <span id="top">DaKoPo</span>
-          </NavLink>
+          </Link>
         </div>
         <Navigation closeMenu={closeMenu} menuOpen={menuOpen} />
         <div

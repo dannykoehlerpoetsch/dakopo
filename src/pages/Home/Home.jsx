@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
@@ -17,13 +19,13 @@ export default function Home() {
         <p>Leipzig{language === "de" ? "" : ", Germany"}</p>
 
         <div className={styles.contentLogo}>
-          <img src={Mern} alt="mern-stack logo" />
+          <img src={Mern.src} alt="mern-stack logo" />
         </div>
       </div>
       <div className={styles.image}>
         <img
           className={darkMode ? styles.darkMode : styles.lightMode}
-          src={Portrait}
+          src={Portrait.src}
           alt="Picture from Danny Köhler-Poetsch"
           title="Hi, I'm Danny Köhler-Poetsch!"
           loading="eager"

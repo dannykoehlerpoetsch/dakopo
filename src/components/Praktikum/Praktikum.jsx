@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useContext } from "react";
 import styles from "./Praktikum.module.css";
 import { LanguageContext } from "../../context/LanguageContext";
