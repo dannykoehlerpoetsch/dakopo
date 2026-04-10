@@ -6,7 +6,6 @@ import { FaLinkedin, FaSquareGithub, FaSquareInstagram } from "react-icons/fa6";
 import styles from "./Contact.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
-import Impressum from "../../components/Impressum/Impressum";
 
 export default function Contact() {
   const nameId = useId();
@@ -21,7 +20,6 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [showImpressum, setShowImpressum] = useState(false);
   const [countdown, setCountdown] = useState(5);
   const countdownRef = useRef(null);
 
@@ -264,15 +262,6 @@ export default function Contact() {
           )}
         </div>
       </div>
-      <button
-        className={styles.impressumBtn}
-        onClick={() => setShowImpressum((prevState) => !prevState)}
-      >
-        {showImpressum && language === "eng" ? "close" : ""}{" "}
-        {language === "de" ? "Impressum" : "Imprint"}{" "}
-        {showImpressum && language === "de" ? "schließen" : ""}
-      </button>
-      {showImpressum && <Impressum />}
     </section>
   );
 }
