@@ -52,7 +52,7 @@ export const metadata = {
   ],
   robots: "index, follow",
   verification: {
-    google: "159vB1VuwPleYC1YY02VuVuMNqYCh04b6zn06XJ_oCs",
+    google: "4i9qYYV0GvcTR_Bhorsuwt7xP5N9SktehPLlOZIYST8",
   },
   icons: {
     icon: "/favicon-32x32.png",
