@@ -16,14 +16,19 @@ export default function BackToTopLink() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <a
-      href="#top"
+    <button
+      onClick={scrollToTop}
       title="back to top"
       className={`${styles.backToTopLink} ${visible ? styles.visible : ""}`}
       aria-label="Back to top"
     >
       <FaCircleUp aria-hidden="true" />
-    </a>
+    </button>
   );
 }
