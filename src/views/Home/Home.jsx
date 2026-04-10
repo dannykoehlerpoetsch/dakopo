@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Home.module.css";
-import Portrait from "../../assets/danny-start.webp";
+import Portrait from "../../assets/DAK.png";
 
 export default function Home() {
     const { darkMode } = useContext(ThemeContext);
