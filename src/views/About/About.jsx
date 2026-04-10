@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useContext } from "react";
-import * as Accordion from "@radix-ui/react-accordion";
 import { ThemeContext } from "../../context/ThemeContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./About.module.css";
 import { data } from "../../data/data";
-import { LanguageContext } from "../../context/LanguageContext";
+import AccordionList from "../../components/AccordionList/AccordionList";
 import Link from "next/link";
 
 export default function About() {
@@ -37,23 +37,7 @@ export default function About() {
           </p>
       )}
 
-      <Accordion.Root type="multiple" defaultValue={data.map((_, i) => `item-${i}`)} className={styles.accordionRoot}>
-        {data.map((info, index) => (
-          <Accordion.Item key={index} value={`item-${index}`} className={styles.accordionItem}>
-            <Accordion.Header asChild>
-              <h3>
-                <Accordion.Trigger className={styles.accordionTrigger}>
-                  <span className={styles.chevron} aria-hidden="true">▶</span>
-                  {language === "de" ? info.titleDe : info.title}
-                </Accordion.Trigger>
-              </h3>
-            </Accordion.Header>
-            <Accordion.Content className={styles.accordionContent}>
-              <p>{language === "de" ? info.infoDe : info.info}</p>
-            </Accordion.Content>
-          </Accordion.Item>
-        ))}
-      </Accordion.Root>
+      <AccordionList items={data} />
 
     </section>
   );

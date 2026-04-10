@@ -2,10 +2,10 @@
 
 import React, { useContext } from "react";
 import Image from "next/image";
-import * as Accordion from "@radix-ui/react-accordion";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Techstack.module.css";
+import AccordionList from "../../components/AccordionList/AccordionList";
 import TechLight from "../../assets/Tech-Stack-light.png";
 import TechDark from "../../assets/Tech-Stack-dark.png";
 
@@ -91,23 +91,7 @@ export default function Techstack() {
           priority
         />
       </div>
-      <Accordion.Root type="multiple" className={styles.accordionRoot}>
-        {technologies.map((tech, index) => (
-          <Accordion.Item key={index} value={`item-${index}`} className={styles.accordionItem}>
-            <Accordion.Header asChild>
-              <h3>
-                <Accordion.Trigger className={styles.accordionTrigger}>
-                  <span className={styles.chevron} aria-hidden="true">▶</span>
-                  {tech.title}
-                </Accordion.Trigger>
-              </h3>
-            </Accordion.Header>
-            <Accordion.Content className={styles.accordionContent}>
-              <p>{language === "de" ? tech.infoDe : tech.info}</p>
-            </Accordion.Content>
-          </Accordion.Item>
-        ))}
-      </Accordion.Root>
+      <AccordionList items={technologies} />
     </section>
   );
 }
