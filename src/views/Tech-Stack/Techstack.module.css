@@ -12,15 +12,21 @@
   }
 
   .intro {
-    text-align: center;
+    text-align-last: center;
     margin-bottom: 2em;
   }
 }
 
 .imageWrapper {
+  position: relative;
   width: 100%;
   max-width: 900px;
-  display: flex;
-  justify-content: center;
+  aspect-ratio: 1000 / 600;
   margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+  .techstack .intro {
+    text-align-last: left;
+  }
 }
