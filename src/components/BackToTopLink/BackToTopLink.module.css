@@ -7,6 +7,11 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  background: none;
+  border: none;
+  color: var(--secondary-color-light);
+  cursor: pointer;
+  padding: 0;
 }
 
 .backToTopLink.visible {
