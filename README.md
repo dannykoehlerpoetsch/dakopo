@@ -1,47 +1,83 @@
 # Portfolio DaKoPo
 
-[english]
-
-## This is my portfolio, built in React.
-
-The portfolio was created in September 2024, after I gained initial knowledge in React. I plan to continuously expand this project as my web development skills grow. Primarily, this portfolio serves to give you an initial overview of me.
-
-### Technologies used:
-
-- React-Router-Dom
-- Context API
-- Controlled Input
-- useContext
-- useState
-- CSS Modules
-
-### Features:
-
-- Responsive web design
-- Choice between dark mode and light mode
-- Website available in German and English
+**Live:** [dakopo.vercel.app](https://dakopo.vercel.app)
 
 ---
 
-[deutsch]
+[English]
 
-# Portfolio DaKoPo
+## Personal portfolio of Danny Köhler-Poetsch – Frontend Developer from Leipzig.
 
-## Das ist mein Portfolio, gebaut in React.
+Originally built with React in September 2024, the portfolio has since been migrated to Next.js 15 (App Router) and is continuously expanded. It showcases my projects, tech stack and professional background.
 
-Das Portfolio wurde im September 2024 erstellt, nachdem ich erste Kenntnisse in React erlangt habe. Ich habe vor, dieses Projekt mit wachsenden Fähigkeiten in der Webprogrammierung laufend zu erweitern. In erster Linie dient das Portfolio dazu, Ihnen einen ersten Überblick über mich zu geben.
+### Tech Stack
 
-### Genutzte Techniken:
+- **Framework:** Next.js 15 (App Router), React 19
+- **Language:** JavaScript
+- **Styling:** CSS Modules, CSS Custom Properties
+- **UI Components:** Radix UI (Accordion, Switch)
+- **Icons:** react-icons (Font Awesome 6)
+- **Deployment:** Vercel
+- **Package Manager:** Bun
 
-- React-Router-Dom
-- Context API
-- Controlled Input
-- useContext
-- useState
-- CSS-Modules
+### Features
 
-### Features:
+- Responsive design across all viewports
+- Dark mode / light mode with persistent preference
+- Bilingual content (German / English)
+- Sticky header with dynamic settings panel
+- Accordion components with expand/collapse all
+- Contact form with client-side validation (via Formspree)
+- Dynamic sitemap and robots.txt for SEO
+- Smooth page transitions
+- Back-to-top button
+- Imprint & privacy policy page
 
-- Responsives Webdesign
-- Wahl zwischen Dark Mode und Light Mode
-- Webseite auf Deutsch und Englisch verfügbar
+### Pages
+
+- **Home** – Introduction with portrait and bio
+- **About** – Professional background, working style, personal qualities
+- **Projects** – Project showcase with descriptions and links
+- **Tech-Stack** – Categorized overview of technologies
+- **Contact** – Contact form, email button and social media links
+- **Imprint** – Legal information and privacy policy
+
+---
+
+[Deutsch]
+
+## Persönliches Portfolio von Danny Köhler-Poetsch – Frontendentwickler aus Leipzig.
+
+Ursprünglich im September 2024 mit React erstellt, wurde das Portfolio seitdem auf Next.js 15 (App Router) migriert und wird kontinuierlich weiterentwickelt. Es gibt Einblick in meine Projekte, meinen Tech-Stack und meinen beruflichen Hintergrund.
+
+### Tech-Stack
+
+- **Framework:** Next.js 15 (App Router), React 19
+- **Sprache:** JavaScript
+- **Styling:** CSS Modules, CSS Custom Properties
+- **UI-Komponenten:** Radix UI (Accordion, Switch)
+- **Icons:** react-icons (Font Awesome 6)
+- **Deployment:** Vercel
+- **Paketmanager:** Bun
+
+### Features
+
+- Responsives Design für alle Viewports
+- Dark Mode / Light Mode mit gespeicherter Einstellung
+- Zweisprachige Inhalte (Deutsch / Englisch)
+- Sticky Header mit dynamischem Settings-Panel
+- Akkordeon-Komponenten mit Alle auf-/zuklappen
+- Kontaktformular mit clientseitiger Validierung (über Formspree)
+- Dynamische Sitemap und robots.txt für SEO
+- Sanfte Seitenübergänge
+- Back-to-Top-Button
+- Impressum & Datenschutz
+
+### Seiten
+
+- **Home** – Vorstellung mit Portrait und Kurzbiografie
+- **Über mich** – Beruflicher Hintergrund, Arbeitsweise, persönliche Eigenschaften
+- **Projekte** – Projektübersicht mit Beschreibungen und Links
+- **Tech-Stack** – Kategorisierte Übersicht der Technologien
+- **Kontakt** – Kontaktformular, E-Mail-Button und Social-Media-Links
+- **Impressum** – Rechtliche Informationen und Datenschutz
