@@ -2,12 +2,14 @@
 
 import ThemeProvider, { ThemeContext } from "../context/ThemeContext";
 import LanguageProvider from "../context/LanguageContext";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle";
 import { useContext } from "react";
 
 export default function Providers({ children }) {
   return (
     <ThemeProvider>
       <LanguageProvider>
+        <DynamicTitle />
         <ThemeWrapper>{children}</ThemeWrapper>
       </LanguageProvider>
     </ThemeProvider>

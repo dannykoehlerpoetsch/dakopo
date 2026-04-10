@@ -19,22 +19,36 @@ const splash = localFont({
 });
 
 export const metadata = {
-  title: "DaKoPo Portfolio",
-  description: "Portfolio DaKoPo",
+  title: {
+    default: "Danny Köhler-Poetsch – Frontend Developer | Leipzig",
+    template: "%s | DaKoPo Portfolio",
+  },
+  description:
+    "Portfolio von Danny Köhler-Poetsch – Frontendentwickler aus Leipzig. Projekte mit React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, SASS und Salesforce LWC.",
   authors: [{ name: "Danny Köhler-Poetsch" }],
   keywords: [
-    "Danny",
     "Danny Köhler-Poetsch",
-    "dakopo",
-    "portfolio",
-    "webentwickler",
-    "leipzig",
-    "frontend",
-    "react",
-    "javascript",
-    "html",
-    "css",
-    "softwareentwickler portfolio",
+    "Frontend Developer",
+    "Frontendentwickler",
+    "Leipzig",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MERN Stack",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "SASS",
+    "Salesforce",
+    "Lightning Web Components",
+    "LWC",
+    "Portfolio",
+    "Webentwickler",
+    "Softwareentwickler",
   ],
   robots: "index, follow",
   verification: {
@@ -42,6 +56,21 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon-32x32.png",
+  },
+  openGraph: {
+    title: "Danny Köhler-Poetsch – Frontend Developer",
+    description:
+      "Projekte und Technologien: React, Next.js, Node.js, MongoDB, Tailwind CSS, Salesforce LWC und mehr.",
+    url: "https://dakopo.vercel.app",
+    siteName: "DaKoPo Portfolio",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Danny Köhler-Poetsch – Frontend Developer",
+    description:
+      "Frontend Developer aus Leipzig – React, Next.js, MERN Stack, Salesforce LWC.",
   },
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaXmark, FaGear } from "react-icons/fa6";
 import * as Switch from "@radix-ui/react-switch";
@@ -14,9 +14,26 @@ export default function Header() {
   const { language, switchLanguage } = useContext(LanguageContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const [settings, setSettings] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const updateHeight = () => {
+      document.documentElement.style.setProperty(
+        "--header-height",
+        `${header.offsetHeight}px`
+      );
+    };
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(header);
+    updateHeight();
+    return () => observer.disconnect();
+  }, []);
 
   const handleDarkMode = () => {
     setDarkMode((prevState) => !prevState);
+    closeSettings();
   };
 
   const toggleMenu = () => {
@@ -37,23 +54,24 @@ export default function Header() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header ref={headerRef} className={`${styles.header} ${darkMode ? styles.darkMode : styles.lightMode}`}>
         <div className={styles.headerLogo}>
           <Link href="/">
             <span id="top">DaKoPo</span>
           </Link>
         </div>
         <Navigation closeMenu={closeMenu} menuOpen={menuOpen} toggleSettings={toggleSettings} />
-        <button
-          className={`${styles.burger} ${
-            darkMode ? "dark-mode" : "light-mode"
-          }`}
-          onClick={toggleMenu}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
-        </button>
+        {!menuOpen && (
+          <button
+            className={`${styles.burger} ${
+              darkMode ? "dark-mode" : "light-mode"
+            }`}
+            onClick={toggleMenu}
+            aria-label="Open menu"
+          >
+            <FaBars aria-hidden="true" />
+          </button>
+        )}
 
         <button
           className={`${styles.settings} ${

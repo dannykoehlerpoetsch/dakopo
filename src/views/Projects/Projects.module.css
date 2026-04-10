@@ -53,6 +53,72 @@
       flex-direction: column;
       align-items: center;
 
+      .category {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.7;
+        margin-bottom: 0.25em;
+      }
+
+      .highlights {
+        width: 100%;
+        list-style: none;
+        padding: 0.5em 0;
+        font-size: 0.9rem;
+        opacity: 0.85;
+
+        li {
+          padding-left: 1.2em;
+          text-indent: -1.2em;
+        }
+
+        li::before {
+          content: "✓ ";
+          font-weight: bold;
+          color: var(--secondary-color-light);
+        }
+      }
+
+      .readMoreBtn {
+        all: unset;
+        cursor: pointer;
+        font-size: 0.85rem;
+        color: var(--secondary-color-light);
+        font-weight: 600;
+        padding: 0.25em 0;
+        align-self: flex-start;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .infoText {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.5em 0;
+        opacity: 0.85;
+        line-height: 1.5;
+      }
+
+      .stackBadges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4em;
+        width: 100%;
+        padding: 0.5em 0;
+
+        .badge {
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 0.25em 0.75em;
+          border-radius: 99vh;
+          background-color: rgba(128, 128, 128, 0.15);
+          white-space: nowrap;
+        }
+      }
+
       .cardLinks {
         display: flex;
         width: 100%;

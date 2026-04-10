@@ -1,51 +1,51 @@
 export const data = [
   {
     title: "Technologies",
-    info: "I work with JavaScript, React, Next.js, Node.js, Express.js and MongoDB (MERN Stack), as well as HTML5, CSS3, SASS and Tailwind CSS. In addition, I develop standard and custom Lightning Web Components (LWC) with SLDS in the Salesforce ecosystem.",
+    info: "I work primarily with JavaScript, React, Next.js, Node.js, Express.js and MongoDB, alongside HTML5, CSS3, SASS and Tailwind CSS. In my day-to-day work, I also build standard and custom Lightning Web Components (LWC) with SLDS in the Salesforce ecosystem. I enjoy working with modern frontend technologies, maintainable component structures and solutions that balance usability, performance and clean implementation.",
     titleDe: "Technologien",
     infoDe:
-      "Ich arbeite mit JavaScript, React, Next.js, Node.js, Express.js und MongoDB (MERN-Stack) sowie HTML5, CSS3, SASS und Tailwind CSS. Darüber hinaus entwickle ich Standard- und Custom Lightning Web Components (LWC) mit SLDS im Salesforce-Ökosystem.",
+        "Ich arbeite vor allem mit JavaScript, React, Next.js, Node.js, Express.js und MongoDB sowie mit HTML5, CSS3, SASS und Tailwind CSS. In meinem Arbeitsalltag entwickle ich außerdem Standard- und Custom Lightning Web Components (LWC) mit SLDS im Salesforce-Ökosystem. Besonders gerne arbeite ich mit modernen Frontend-Technologien, wartbaren Komponentenstrukturen und Lösungen, die Benutzerfreundlichkeit, Performance und saubere Umsetzung miteinander verbinden.",
   },
   {
     title: "Professional Background",
-    info: "Since 2025, I have been working as a frontend developer at a digital agency, where I build exciting B2B projects using various technologies. Before that, from 2011 to 2023, I worked as a technical laboratory assistant in the field of microbiology. Unfortunately, I wasn't able to fully utilize all of my skills in this role, which led me to pursue a career in web development to help shape the digital future. I then enrolled in the Web and Software Development course at the DCI - Digital Career Institute, where I served as both class representative and tutor. Thanks to my quick learning ability and talent for simplifying complex topics, I already started earning money as a tutor during the course.",
+    info: "Since 2025, I have been working as a frontend developer at a digital agency, contributing to B2B projects across different technologies and systems. Before moving into web development, I worked for many years as a technical laboratory assistant in microbiology. This background shaped the way I work today: structured, precise and solution-oriented. To transition into tech, I completed formal training in web and software development at DCI, where I also took on additional responsibility as class representative and tutor. Teaching others during that time strengthened not only my technical understanding, but also my ability to communicate complex topics in a clear and practical way.",
     titleDe: "Beruflicher Hintergrund",
     infoDe:
-      "Seit 2025 arbeite ich als Frontendentwickler in einer Digitalagentur, wo ich an spannenden Projekten im B2B-Bereich mit verschiedenen Technologien arbeite. Zuvor war ich von 2011 bis 2023 als technischer Laborassistent im Bereich Mikrobiologie tätig. Leider konnte ich in dieser Rolle nicht all meine Fähigkeiten vollständig einsetzen, was mich dazu veranlasste, eine Karriere in der Webentwicklung zu verfolgen, um die digitale Zukunft mitzugestalten. Daraufhin schrieb ich mich im Kurs für Web- und Softwareentwicklung am DCI - Digital Career Institute ein, wo ich sowohl als Klassensprecher als auch als Tutor tätig war. Dank meiner schnellen Auffassungsgabe und meines Talents, komplexe Themen zu vereinfachen, habe ich bereits während des Kurses angefangen, als Tutor Geld zu verdienen.",
-  },
-  {
-    title: "Languages",
-    info: "I speak German as my native language and English at a B2 level.",
-    titleDe: "Sprachen",
-    infoDe:
-      "Ich spreche Deutsch als Muttersprache und Englisch auf B2-Niveau.",
+        "Seit 2025 arbeite ich als Frontendentwickler in einer Digitalagentur und wirke dort an B2B-Projekten mit unterschiedlichen Technologien und Systemen mit. Vor meinem Wechsel in die Webentwicklung war ich viele Jahre als technischer Laborassistent in der Mikrobiologie tätig. Diese berufliche Erfahrung prägt meine Arbeitsweise bis heute: strukturiert, präzise und lösungsorientiert. Für den Einstieg in die Tech-Welt habe ich eine Weiterbildung im Bereich Web- und Softwareentwicklung am DCI absolviert, wo ich zusätzlich Verantwortung als Klassensprecher und Tutor übernommen habe. Gerade die Vermittlung von Inhalten hat nicht nur mein technisches Verständnis vertieft, sondern auch meine Fähigkeit gestärkt, komplexe Themen klar und praxisnah zu erklären.",
   },
   {
     title: "Motivation and Work Ethic",
-    info: "While I neither attended university nor obtained a high school diploma (Abitur), I have consistently demonstrated that determination and perseverance are key to achieving one's goals. I tackle tasks with enthusiasm and dedication, always aiming to find effective solutions. I thrive in team environments and enjoy collaborating with others, yet I am equally capable of working independently. My approach to challenges is structured and organized, ensuring high-quality results even under pressure. I maintain focus and composure, regardless of how demanding the situation may become.",
+    info: "I am a determined and self-driven person who enjoys building things with care and purpose. I approach challenges in a structured way, stay calm under pressure and keep a strong focus on finding practical solutions. I value reliability, clear communication and steady progress. Whether I work independently or as part of a team, I aim to contribute with commitment, consistency and a genuine interest in improving both the product and the process behind it.",
     titleDe: "Motivation und Arbeitsethik",
     infoDe:
-      "Obwohl ich weder eine Universität besucht noch ein Abitur absolviert habe, habe ich stets bewiesen, dass Zielstrebigkeit und Durchhaltevermögen entscheidend für den Erfolg sind. Ich gehe Aufgaben mit Begeisterung und Engagement an und finde stets effektive Lösungen. Die Arbeit im Team und die Zusammenarbeit mit anderen bereiten mir große Freude, doch auch eigenständiges Arbeiten gelingt mir hervorragend. Herausforderungen begegne ich strukturiert und organisiert, sodass ich selbst in stressigen Situationen konzentriert und ruhig bleibe, um optimale Ergebnisse zu erzielen.",
+        "Ich bin ein zielstrebiger und eigenverantwortlicher Mensch, der Aufgaben mit Sorgfalt und Sinn angeht. Herausforderungen begegne ich strukturiert, bleibe auch unter Druck ruhig und richte meinen Fokus auf praktikable Lösungen. Zuverlässigkeit, klare Kommunikation und kontinuierliche Weiterentwicklung sind mir besonders wichtig. Ob im Team oder eigenständig: Ich möchte mit Einsatz, Beständigkeit und echtem Interesse dazu beitragen, sowohl das Produkt als auch die dahinterliegenden Prozesse zu verbessern.",
   },
   {
     title: "Personal Qualities",
-    info: "I have a good sense of humor and enjoy jokes that make you think for a moment. What do people appreciate about me? Well, I am friendly, attentive, considerate, responsible, and very reliable.",
+    info: "People often describe me as reliable, attentive and easy to work with. I value respectful collaboration, clear communication and a thoughtful approach to working with others. I also appreciate a good sense of humor, especially when it comes with a bit of wit.",
     titleDe: "Persönliche Eigenschaften",
     infoDe:
-      "Ich habe einen guten Sinn für Humor und mag Witze, bei denen man einen Moment nachdenken muss. Was schätzen die Leute an mir? Nun, ich bin freundlich, aufmerksam, rücksichtsvoll, verantwortungsbewusst und sehr zuverlässig.",
+        "Menschen beschreiben mich oft als zuverlässig, aufmerksam und angenehm in der Zusammenarbeit. Ich schätze einen respektvollen Umgang, klare Kommunikation und einen überlegten Blick auf das Miteinander im Arbeitsalltag. Außerdem mag ich Humor – besonders dann, wenn er mit etwas Feingefühl und einem kleinen Augenzwinkern daherkommt.",
+  },
+  {
+    title: "Languages",
+    info: "German is my native language, and I use English at a solid B2 level in both professional and technical contexts.",
+    titleDe: "Sprachen",
+    infoDe:
+        "Deutsch ist meine Muttersprache, und Englisch nutze ich auf einem soliden B2-Niveau sowohl im beruflichen als auch im technischen Kontext.",
   },
   {
     title: "Hobbies and Interests",
-    info: "In my free time, I am deeply involved in music – I enjoy playing guitar, bass, and drums, and I recently started learning the piano. I'm also a bit of a series addict, with a love for fantasy and horror shows and movies. I'm always up for an exciting documentary as well. Of course, I'm not just glued to my computer or TV – I love traveling and exploring different countries and cultures. It may sound strange, but I feel at home when I’m on the road.",
+    info: "Outside of development, music plays a big role in my life. I enjoy playing guitar, bass and drums, and I recently started learning the piano. I am also interested in film, series and documentaries, especially when they are imaginative, atmospheric or thought-provoking. Another important part of my life is traveling. Discovering new places, cultures and perspectives gives me energy and inspiration far beyond everyday routines.",
     titleDe: "Hobbys und Interessen",
     infoDe:
-      "In meiner Freizeit beschäftige ich mich viel mit Musik – ich spiele gerne Gitarre, Bass und Schlagzeug und habe kürzlich angefangen, Klavier zu lernen. Ich bin auch ein bisschen verrückt nach Serien, besonders liebe ich Fantasy- und Horrorshows und -filme. Eine spannende Dokumentation schaue ich mir ebenfalls gerne an. Natürlich bin ich nicht nur vor dem Computer oder Fernseher – ich liebe es, zu reisen und verschiedene Länder und Kulturen zu erkunden. Es mag seltsam klingen, aber ich fühle mich auf Reisen zu Hause.",
+        "Außerhalb der Entwicklung spielt Musik eine große Rolle in meinem Leben. Ich spiele gerne Gitarre, Bass und Schlagzeug und habe vor Kurzem begonnen, Klavier zu lernen. Außerdem interessiere ich mich für Filme, Serien und Dokumentationen – besonders dann, wenn sie atmosphärisch, fantasievoll oder gedanklich anregend sind. Ein weiterer wichtiger Teil meines Lebens ist das Reisen. Neue Orte, Kulturen und Perspektiven kennenzulernen, gibt mir Energie und Inspiration weit über den Alltag hinaus.",
   },
   {
     title: "Fun Fact",
-    info: "I love Halloween and everything that comes with it, so much so that I chose Halloween as my wedding day. I even traveled to a different state to get married, since it was a public holiday in my home state and the ceremony couldn't take place.",
+    info: "I love Halloween so much that I chose it as my wedding day. To make it happen, I even got married in a different German state, because October 31 is a public holiday in Saxony and the local registry office was closed.",
     titleDe: "Fun Fact",
     infoDe:
-      "Ich liebe Halloween und alles, was dazu gehört, so sehr, dass ich Halloween als meinen Hochzeitstag gewählt habe. Ich bin sogar in ein anderes Bundesland gereist, um zu heiraten, da dieser Tag in meinem Bundesland Sachsen ein Feiertag ist und das Standesamt geschlossen hat.",
+        "Ich liebe Halloween so sehr, dass ich es zu meinem Hochzeitstag gemacht habe. Damit das überhaupt möglich war, habe ich sogar in einem anderen Bundesland geheiratet, weil der 31. Oktober in Sachsen ein Feiertag ist und das Standesamt geschlossen hatte.",
   },
 ];
