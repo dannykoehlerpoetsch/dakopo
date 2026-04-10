@@ -14,6 +14,13 @@ export const data = [
         "Seit 2025 arbeite ich als Frontendentwickler in einer Digitalagentur und wirke dort an B2B-Projekten mit unterschiedlichen Technologien und Systemen mit. Vor meinem Wechsel in die Webentwicklung war ich viele Jahre als technischer Laborassistent in der Mikrobiologie tätig. Diese berufliche Erfahrung prägt meine Arbeitsweise bis heute: strukturiert, präzise und lösungsorientiert. Für den Einstieg in die Tech-Welt habe ich eine Weiterbildung im Bereich Web- und Softwareentwicklung am DCI absolviert, wo ich zusätzlich Verantwortung als Klassensprecher und Tutor übernommen habe. Gerade die Vermittlung von Inhalten hat nicht nur mein technisches Verständnis vertieft, sondern auch meine Fähigkeit gestärkt, komplexe Themen klar und praxisnah zu erklären.",
   },
   {
+    title: "Working Style",
+    info: "In my current role, I work as part of an agile development team on complex B2B web applications. Our work is structured around iterative development cycles, where requirements are gathered, refined and translated into technical tasks. I actively contribute throughout the process – from analyzing business requirements and breaking them down into implementable tasks, to estimating and delivering solutions. Close collaboration within the team, along with a shared focus on quality, maintainability and clean implementation, is a key part of how I work.",
+    titleDe: "Arbeitsweise",
+    infoDe:
+        "In meiner aktuellen Rolle arbeite ich in einem agilen Entwicklungsteam an komplexen B2B-Webanwendungen. Die Zusammenarbeit erfolgt in iterativen Entwicklungszyklen, in denen Anforderungen aufgenommen, verfeinert und in technische Aufgaben übersetzt werden. Dabei bringe ich mich aktiv in den gesamten Prozess ein – von der Analyse fachlicher Anforderungen über die Strukturierung und Schätzung von Tickets bis hin zur technischen Umsetzung. Die enge Zusammenarbeit im Team sowie ein gemeinsames Verständnis für Qualität, Wartbarkeit und saubere Umsetzung sind zentrale Bestandteile meiner Arbeitsweise.",
+  },
+  {
     title: "Motivation and Work Ethic",
     info: "I am a determined and self-driven person who enjoys building things with care and purpose. I approach challenges in a structured way, stay calm under pressure and keep a strong focus on finding practical solutions. I value reliability, clear communication and steady progress. Whether I work independently or as part of a team, I aim to contribute with commitment, consistency and a genuine interest in improving both the product and the process behind it.",
     titleDe: "Motivation und Arbeitsethik",

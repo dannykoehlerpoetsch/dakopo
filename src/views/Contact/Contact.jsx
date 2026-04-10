@@ -60,27 +60,27 @@ export default function Contact() {
 
     if (name.length < 3) {
       setError(
-        language === "de"
-          ? "Der Name muss mindestens 3 Zeichen lang sein"
-          : "Name must be at least 3 characters long."
+          language === "de"
+              ? "Der Name muss mindestens 3 Zeichen lang sein."
+              : "Name must be at least 3 characters long."
       );
       return;
     }
 
     if (!validateEmail(mail)) {
       setError(
-        language === "de"
-          ? "Bitte eine gültige Email-Adresse eingeben"
-          : "Please enter a valid email address."
+          language === "de"
+              ? "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+              : "Please enter a valid email address."
       );
       return;
     }
 
     if (message.length < 5 || message.length > 2500) {
       setError(
-        language === "de"
-          ? "Die Nachricht muss mindestens 5 Zeichen enthalten und nicht mehr als 2500 Zeichen"
-          : "Message must be between 5 and 2500 characters long."
+          language === "de"
+              ? "Die Nachricht muss zwischen 5 und 2500 Zeichen lang sein."
+              : "Message must be between 5 and 2500 characters long."
       );
       return;
     }
@@ -109,17 +109,17 @@ export default function Contact() {
         setMessage("");
       } else {
         setError(
-          language === "de"
-            ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
-            : "Something went wrong. Please try again later."
+            language === "de"
+                ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
+                : "Something went wrong. Please try again later."
         );
       }
     } catch (err) {
       console.error("Error submitting the form", err);
       setError(
-        language === "de"
-          ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
-          : "Something went wrong. Please try again later."
+          language === "de"
+              ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
+              : "Something went wrong. Please try again later."
       );
     } finally {
       setLoading(false);
@@ -127,141 +127,148 @@ export default function Contact() {
   };
 
   return (
-    <section
-      className={`${styles.contactWrapper} ${
-        darkMode ? styles.darkMode : styles.lightMode
-      }`}
-    >
-      <h2>
-        {language === "de"
-          ? "Treten Sie mit mir in Kontakt"
-          : "Get in contact with me!"}
-      </h2>
-      <div className={styles.mailContact}>
-        <div className={styles.mailContactWrapper}>
-          <div className={styles.smLinks}>
-            <a
-              href="https://www.linkedin.com/in/danny-k%C3%B6hler-poetsch-6738332a5/"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <FaLinkedin aria-hidden="true" />
-            </a>
-            <a
-              href="https://github.com/dannykoehlerpoetsch"
-              target="_blank"
-              title="GitHub"
-            >
-              <FaSquareGithub aria-hidden="true" />
-            </a>
-            <a
-              href="https://www.instagram.com/da_ko_po/"
-              target="_blank"
-              title="Instagram"
-            >
-              <FaSquareInstagram aria-hidden="true" />
-            </a>
-          </div>
-          <button
-            className={styles.emailBtn}
-            onClick={() => {
-              const user = "dakopo-coding";
-              const domain = "gmx.net";
-              window.location.href = `mailto:${user}@${domain}`;
-            }}
-          >
-            {language === "de" ? "E-Mail senden" : "Send E-Mail"}
-          </button>
-        </div>
-      </div>
+      <section
+          className={`${styles.contactWrapper} ${
+              darkMode ? styles.darkMode : styles.lightMode
+          }`}
+      >
+        <h2>{language === "de" ? "Kontakt" : "Get in touch"}</h2>
 
-      <p>{language === "de" ? "oder" : "or"}</p>
-
-      <div className={styles.contactForm}>
-        <h3>
-          {language === "de"
-            ? "Schreiben Sie mir eine Nachricht"
-            : "Leave me a message!"}
-        </h3>
-        {!submitted && (
-          <form
-            method="POST"
-            action="https://formspree.io/f/xyzganan"
-            onSubmit={handleSubmit}
-          >
-            <label htmlFor={nameId}>
-              Name:
-              <input
-                type="text"
-                name="name"
-                id={nameId}
-                placeholder={
-                  language === "de" ? "Max Mustermann" : "example: `John Doe`"
-                }
-                required
-                value={name}
-                onChange={handleChange}
-                className={darkMode ? styles.darkMode : styles.lightMode}
-              />
-            </label>
-            <label htmlFor={emailId}>
-              E-Mail:
-              <input
-                type="email"
-                name="email"
-                id={emailId}
-                placeholder={
-                  language === "de"
-                    ? "Max-Mustermann@mail.de"
-                    : "example: `John-Doe@mail.de`"
-                }
-                required
-                value={mail}
-                onChange={handleChange}
-              />
-            </label>
-            <label htmlFor={messageId}>
-              {language === "de" ? "Ihre Nachricht" : "Your message"}
-              <textarea
-                name="message"
-                id={messageId}
-                rows="10"
-                cols="33"
-                placeholder={
-                  language === "de"
-                    ? "Ihre Nachricht an mich"
-                    : "your message to me"
-                }
-                required
-                value={message}
-                onChange={handleChange}
-              ></textarea>
-            </label>
+        <div className={styles.mailContact}>
+          <div className={styles.mailContactWrapper}>
+            <div className={styles.smLinks}>
+              <a
+                  href="https://www.linkedin.com/in/danny-k%C3%B6hler-poetsch-6738332a5/"
+                  target="_blank"
+                  title="LinkedIn"
+              >
+                <FaLinkedin aria-hidden="true" />
+              </a>
+              <a
+                  href="https://github.com/dannykoehlerpoetsch"
+                  target="_blank"
+                  title="GitHub"
+              >
+                <FaSquareGithub aria-hidden="true" />
+              </a>
+              <a
+                  href="https://www.instagram.com/da_ko_po/"
+                  target="_blank"
+                  title="Instagram"
+              >
+                <FaSquareInstagram aria-hidden="true" />
+              </a>
+            </div>
             <button
-              className={styles.submitBtn}
-              title={
-                language === "de" ? "Nachricht absenden" : "submit your message"
-              }
-              disabled={loading}
+                className={styles.emailBtn}
+                onClick={() => {
+                  const user = "dakopo-coding";
+                  const domain = "gmx.net";
+                  window.location.href = `mailto:${user}@${domain}`;
+                }}
             >
-              {loading
-                ? (language === "de" ? "Wird gesendet..." : "Sending...")
-                : (language === "de" ? "absenden" : "send message")}
+              {language === "de" ? "E-Mail schreiben" : "Send an email"}
             </button>
-          </form>
-        )}
-
-        <div aria-live="polite" role="status">
-          {error && <p className={styles.errorMessage}>{error}</p>}
-          {submitted && (
-            <p className={styles.successMessage}>
-              {language === "de"
-                ? `Nachricht erfolgreich verschickt. Weiterleitung in ${countdown}s. Vielen Dank!`
-                : `Message sent successfully! Redirecting in ${countdown}s. Thank you!`}
-            </p>
-          )}
+          </div>
         </div>
-      </div>
-    </section>
+
+        <p>{language === "de" ? "oder" : "or"}</p>
+
+        <div className={styles.contactForm}>
+          <h3>
+            {language === "de"
+                ? "Schreiben Sie mir gerne eine Nachricht"
+                : "Feel free to send me a message"}
+          </h3>
+
+          {!submitted && (
+              <form
+                  method="POST"
+                  action="https://formspree.io/f/xyzganan"
+                  onSubmit={handleSubmit}
+              >
+                <label htmlFor={nameId}>
+                  Name:
+                  <input
+                      type="text"
+                      name="name"
+                      id={nameId}
+                      placeholder={
+                        language === "de" ? "Max Mustermann" : "e.g. John Doe"
+                      }
+                      required
+                      value={name}
+                      onChange={handleChange}
+                      className={darkMode ? styles.darkMode : styles.lightMode}
+                  />
+                </label>
+
+                <label htmlFor={emailId}>
+                  E-Mail:
+                  <input
+                      type="email"
+                      name="email"
+                      id={emailId}
+                      placeholder={
+                        language === "de"
+                            ? "max.mustermann@mail.de"
+                            : "e.g. john.doe@mail.com"
+                      }
+                      required
+                      value={mail}
+                      onChange={handleChange}
+                  />
+                </label>
+
+                <label htmlFor={messageId}>
+                  {language === "de" ? "Ihre Nachricht" : "Your message"}
+                  <textarea
+                      name="message"
+                      id={messageId}
+                      rows="10"
+                      cols="33"
+                      placeholder={
+                        language === "de"
+                            ? "Ihre Nachricht an mich"
+                            : "Your message"
+                      }
+                      required
+                      value={message}
+                      onChange={handleChange}
+                  ></textarea>
+                </label>
+
+                <button
+                    className={styles.submitBtn}
+                    title={
+                      language === "de"
+                          ? "Nachricht senden"
+                          : "Send your message"
+                    }
+                    disabled={loading}
+                >
+                  {loading
+                      ? language === "de"
+                          ? "Wird gesendet..."
+                          : "Sending..."
+                      : language === "de"
+                          ? "Nachricht senden"
+                          : "Send message"}
+                </button>
+              </form>
+          )}
+
+          <div aria-live="polite" role="status">
+            {error && <p className={styles.errorMessage}>{error}</p>}
+            {submitted && (
+                <p className={styles.successMessage}>
+                  {language === "de"
+                      ? `Nachricht erfolgreich gesendet. Weiterleitung in ${countdown} Sekunden. Vielen Dank!`
+                      : `Message sent successfully. Redirecting in ${countdown} seconds. Thank you!`}
+                </p>
+            )}
+          </div>
+        </div>
+      </section>
   );
 }
