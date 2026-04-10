@@ -10,6 +10,7 @@ import { myProjects } from "../../data/links";
 export default function Projects() {
   const { darkMode } = useContext(ThemeContext);
   const [showImage, setShowImage] = useState(null);
+  const [expandedInfo, setExpandedInfo] = useState({});
   const { language } = useContext(LanguageContext);
 
   const openModal = (src) => {
@@ -52,8 +53,49 @@ export default function Projects() {
               />
             </div>
             <div className={styles.cardContent}>
+              <span className={styles.category}>
+                {language === "de" ? project.categoryDe : project.category}
+              </span>
               <h3>{language === "de" ? project.titleDe : project.title}</h3>
-              <p>{language === "de" ? project.infoDe : project.info}</p>
+              <ul className={styles.highlights}>
+                {(language === "de"
+                  ? project.technicalHighlightsDe
+                  : project.technicalHighlights
+                ).map((highlight, i) => (
+                  <li key={i}>{highlight}</li>
+                ))}
+              </ul>
+              <button
+                className={styles.readMoreBtn}
+                onClick={() =>
+                  setExpandedInfo((prev) => ({
+                    ...prev,
+                    [index]: !prev[index],
+                  }))
+                }
+              >
+                {expandedInfo[index]
+                  ? language === "de"
+                    ? "Weniger anzeigen"
+                    : "Show less"
+                  : language === "de"
+                    ? "Mehr erfahren"
+                    : "Read more"}
+              </button>
+              {expandedInfo[index] && (
+                <p className={styles.infoText}>
+                  {language === "de" ? project.infoDe : project.info}
+                </p>
+              )}
+              <div className={styles.stackBadges}>
+                {(language === "de" ? project.stackDe : project.stack).map(
+                  (tech, i) => (
+                    <span key={i} className={styles.badge}>
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
               <div className={styles.cardLinks}>
                 <a
                   href={project.github}

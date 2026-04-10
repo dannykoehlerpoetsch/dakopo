@@ -2,7 +2,7 @@
 
 import React, { useId, useState, useContext, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { FaLinkedin, FaSquareGithub, FaSquareInstagram, FaFacebook } from "react-icons/fa6";
+import { FaLinkedin, FaSquareGithub, FaSquareInstagram } from "react-icons/fa6";
 import styles from "./Contact.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
