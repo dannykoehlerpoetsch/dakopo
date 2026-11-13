@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaCircleUp } from "react-icons/fa6";
 import styles from "./BackToTopLink.module.css";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function BackToTopLink() {
   const [visible, setVisible] = useState(false);
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +26,9 @@ export default function BackToTopLink() {
   return (
     <button
       onClick={scrollToTop}
-      title="back to top"
+      title={language === "de" ? "Zurück nach oben" : "back to top"}
       className={`${styles.backToTopLink} ${visible ? styles.visible : ""}`}
-      aria-label="Back to top"
+      aria-label={language === "de" ? "Zurück nach oben" : "Back to top"}
     >
       <FaCircleUp aria-hidden="true" />
     </button>

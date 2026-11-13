@@ -4,6 +4,9 @@ export const metadata = {
   title: "Tech-Stack",
   description:
     "Technologien von Danny Köhler-Poetsch: React, Next.js, JavaScript, Node.js, Express, MongoDB, Tailwind CSS, SASS und Salesforce LWC.",
+  alternates: {
+    canonical: "/tech-stack",
+  },
 };
 
 export default function TechStackPage() {

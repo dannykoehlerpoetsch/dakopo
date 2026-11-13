@@ -4,6 +4,9 @@ export const metadata = {
   title: "Kontakt",
   description:
     "Kontakt zu Danny Köhler-Poetsch – Frontendentwickler aus Leipzig. Erreichbar per Kontaktformular, E-Mail oder Social Media.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

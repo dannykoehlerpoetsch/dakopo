@@ -25,7 +25,17 @@ const pageTitles = {
     de: "Kontakt | DaKoPo Portfolio",
     en: "Contact | DaKoPo Portfolio",
   },
+  "/imprint": {
+    de: "Impressum & Datenschutz | DaKoPo Portfolio",
+    en: "Imprint & Privacy | DaKoPo Portfolio",
+  },
 };
+
+/**
+ * Die Inhalte dieser Seite werden je Sprache im Client gewechselt, die
+ * Next-Metadaten sind statisch. Diese Komponente ist die bewusste Bruecke:
+ * Sie haelt document.title konsistent zur aktiven Sprache und zur Route.
+ */
 
 export default function DynamicTitle() {
   const { language } = useContext(LanguageContext);

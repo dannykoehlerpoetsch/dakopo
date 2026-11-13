@@ -3,7 +3,10 @@ import Projects from "../../views/Projects/Projects";
 export const metadata = {
   title: "Projekte",
   description:
-    "Private Projekte von Danny Köhler-Poetsch – Fullstack-Anwendungen mit React, Next.js, Node.js, Express und MongoDB.",
+    "Auswahl meiner Frontend-Projekte von Danny Köhler-Poetsch: Next.js, TypeScript, Tailwind CSS, Radix UI und automatisierte Tests mit Vitest und Playwright.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export default function ProjectsPage() {

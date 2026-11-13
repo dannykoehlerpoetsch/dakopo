@@ -40,10 +40,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .imageButton {
+        all: unset;
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+        border-radius: inherit;
+
+        &:focus-visible {
+          outline: 2px solid var(--accent-color-light-1);
+          outline-offset: 3px;
+        }
+      }
+
       img {
         width: 100%;
         object-fit: contain;
-        cursor: pointer;
       }
     }
 
@@ -84,7 +97,7 @@
         all: unset;
         cursor: pointer;
         font-size: 0.85rem;
-        color: var(--secondary-color-light);
+        color: var(--accent-text-light);
         font-weight: 600;
         padding: 0.25em 0;
         align-self: flex-start;
@@ -131,9 +144,14 @@
           padding: 0.4em 1em;
           border-radius: 99vh;
           margin: 0 0 0 1em;
-          transition: background-color 0.3s linear;
+          transition:
+            background-color 0.3s linear,
+            color 0.3s linear;
           &:hover {
             background-color: var(--accent-color-light-1);
+            /* Weiss auf dem helleren Akzent bringt nur 3,0:1; auf dem
+               helleren Grund bleibt dunkle Schrift noetig. */
+            color: var(--text-color-light);
           }
         }
 
@@ -156,6 +174,20 @@
   background-color: #222;
 }
 
+/* Akzenttexte auf dunklen Karten brauchen den hellen Akzent (Kontrast).
+   Die Selektoren holen die Spezifitaet der verschachtelten Basisregeln. */
+.cardWrapper .card.darkMode .cardContent .readMoreBtn {
+  color: var(--accent-on-dark);
+}
+
+.cardWrapper .card.darkMode .cardContent .cardLinks .linkToGithub {
+  color: var(--accent-on-dark);
+}
+
+.cardWrapper .card.darkMode .cardContent .cardLinks .linkToGithub:hover {
+  color: var(--text-color-dark);
+}
+
 .cardWrapper .darkMode:nth-of-type(odd) {
   background-color: #111;
 }
@@ -168,29 +200,70 @@
   background-color: var(--highlight-color-light);
 }
 
-.cardWrapper .modal {
+/* Radix Dialog: Overlay und Content sind Geschwister im Portal, beides fixed. */
+.modalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
+  z-index: 50;
+  animation: modalFade 0.2s ease-out;
 }
 
 .modalContent {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fae6e6;
   padding: 20px;
   border-radius: 10px;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 50;
+  animation: modalPop 0.2s ease-out;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color-light-1);
+    outline-offset: 2px;
+  }
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.8em;
+  padding-right: 2em;
+  color: #292524;
+  text-align: center;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modalOverlay,
+  .modalContent {
+    animation: none;
+  }
 }
 
 .closeButton {
@@ -198,6 +271,7 @@
   top: 10px;
   right: 10px;
   font-size: 20px;
+  line-height: 1;
   cursor: pointer;
   color: white;
   font-weight: bold;
@@ -205,6 +279,16 @@
   width: 30px;
   aspect-ratio: 1;
   border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-color-light-1);
+    outline-offset: 2px;
+  }
 }
 
 .modalImage {

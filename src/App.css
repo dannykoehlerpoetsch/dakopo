@@ -19,6 +19,11 @@
   --text-color-dark: #dccab1;
   --secondary-color-dark: #7d5a50;
   --background-dark-item-even: #444;
+
+  /* Akzentfarben mit WCAG-Kontrast fuer Kleine Text (mind. 4,5:1).
+     #b45309 erreicht auf den Kartenfliachen nur 4,0:1, auf dunklem Grund 3,2:1. */
+  --accent-text-light: #8f4205; /* 5,7:1 auf #e7e5e4, 6,5:1 auf #f5f5f4 */
+  --accent-on-dark: #e0a35c;    /* 8,6:1 auf #111, 7,3:1 auf #222 */
 }
 
 body {
@@ -44,6 +49,15 @@ body {
   color: #dccab1;
 }
 
+/* Der Wrapper erhaelt seine Theme-Klasse erst nach der Hydration. Damit ein
+   gespeicherter Darkmode-Wert nicht kurz als Lightmode aufblitzt, gilt die
+   dunkle Flaeche schon fuer die Preload-Phase (Klasse wird nach dem Lesen
+   entfernt). */
+html.dark-mode-preload .app-wrapper {
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
@@ -65,12 +79,13 @@ h2 {
 
 h3 {
   font-size: clamp(1.2rem, 0.3043rem + 3.4783vw, 1.5rem);
-  color: var(--secondary-color-light);
+  /* 18px-Akkordeon-Loeser erfuellt mit #b45309 nur 4,0:1 (nicht GrossText-klassifiziert). */
+  color: var(--accent-text-light);
 }
 
 a {
   /* font-size: clamp(1rem, 0.3043rem + 3.4783vw, 1.1rem); */
-  color: var(--secondary-color-light);
+  color: var(--accent-text-light);
   transition: transform 0.2s linear;
   text-decoration: none;
   position: relative;
@@ -104,4 +119,50 @@ span {
   padding: 5rem 1rem 1rem;
   margin: 0 auto;
   overflow-x: hidden;
+}
+
+/* In Dark Mode brauchen Akzenttexte einen hellen Akzent; der braune
+   Akzent erfuellt auf dunklem Grund die 4,5:1 nicht. */
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode a {
+  color: var(--accent-on-dark);
+}
+
+/* Fuer Screenreader ausgeblendet, visuell aber Teil des Zugriffs (WCAG 2.4.3 / 1.1.1). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Springe zum Inhalt, erscheint erst bei Tastaturfokus (WCAG 2.4.1). */
+.skipLink {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  z-index: 100;
+  padding: 0.6em 1.2em;
+  border-radius: 0 0 10px 10px;
+  background: var(--secondary-color-light);
+  color: #fff;
+  font-weight: 600;
+}
+
+.skipLink:focus-visible {
+  transform: translate(-50%, 0);
+}
+
+/* Mindestens ein deutlicher Fokus-Ring fuer alle interaktiven Elemente. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-color-light-1);
+  outline-offset: 2px;
 }

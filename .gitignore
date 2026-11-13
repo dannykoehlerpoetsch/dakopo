@@ -40,4 +40,14 @@ lerna-debug.log*
 *.sw?
 
 # bun
+# bun.lock is intentionally versioned (reproducible installs, Vercel + Bun detection).
+# Lockfiles of other package managers are not allowed:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# legacy Bun binary lockfile format (Bun < 1.2); superseded by bun.lock
 bun.lockb
+
+# Presentation handout, kept locally only (not served, 6 MB)
+dakopo_presentation.pdf

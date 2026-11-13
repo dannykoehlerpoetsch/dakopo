@@ -20,7 +20,7 @@ export default function About() {
     >
       <h2>{language === "de" ? "Über mich" : "Behind the scenes"}</h2>
 
-      {language === "eng" && (
+      {language !== "de" && (
           <p className={styles.opener}>
             This section offers a closer look at my background, skills and the way I approach my work.
             If you would like to get in touch or have any questions, feel free to visit the{" "}
