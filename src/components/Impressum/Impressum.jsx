@@ -52,9 +52,9 @@ export default function Impressum({ section }) {
             und Spracheinstellungen und werden nicht an Dritte weitergegeben.
           </p>
           <p>
-            This website does not use cookies. Only the user's choice of Dark Mode
+            This website does not use cookies. Only the user’s choice of Dark Mode
             or Light Mode and the selected language setting (German or English) are
-            stored in the browser's local storage (LocalStorage). This information
+            stored in the browser’s local storage (LocalStorage). This information
             is solely used to save the display and language settings and is not
             shared with third parties.
           </p>

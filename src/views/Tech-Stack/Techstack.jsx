@@ -6,8 +6,8 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { LanguageContext } from "../../context/LanguageContext";
 import styles from "./Techstack.module.css";
 import AccordionList from "../../components/AccordionList/AccordionList";
-import TechLight from "../../assets/Tech-Stack-light.png";
-import TechDark from "../../assets/Tech-Stack-dark.png";
+import TechLight from "../../assets/Tech-Stack-light.webp";
+import TechDark from "../../assets/Tech-Stack-dark.webp";
 
 const dailyWorkTechnologies = [
   {

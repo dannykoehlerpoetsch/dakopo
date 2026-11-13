@@ -140,6 +140,7 @@ export default function Contact() {
               <a
                   href="https://www.linkedin.com/in/danny-k%C3%B6hler-poetsch-6738332a5/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   title="LinkedIn"
               >
                 <FaLinkedin aria-hidden="true" />
@@ -147,6 +148,7 @@ export default function Contact() {
               <a
                   href="https://github.com/dannykoehlerpoetsch"
                   target="_blank"
+                  rel="noopener noreferrer"
                   title="GitHub"
               >
                 <FaSquareGithub aria-hidden="true" />
@@ -154,6 +156,7 @@ export default function Contact() {
               <a
                   href="https://www.instagram.com/da_ko_po/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   title="Instagram"
               >
                 <FaSquareInstagram aria-hidden="true" />

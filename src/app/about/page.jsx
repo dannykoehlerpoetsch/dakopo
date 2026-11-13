@@ -4,6 +4,9 @@ export const metadata = {
   title: "Über mich",
   description:
     "Erfahren Sie mehr über Danny Köhler-Poetsch – Frontendentwickler aus Leipzig mit Erfahrung in React, Next.js, MERN Stack und Salesforce LWC.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

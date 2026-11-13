@@ -18,10 +18,19 @@
 
 .footerNav a {
   text-decoration: none;
-  color: var(--secondary-color-light);
+  color: var(--accent-text-light);
   transition: color 0.3s ease;
 }
 
 .footerNav a:hover {
-  color: var(--accent-color-light-1);
+  color: var(--secondary-color-light);
+}
+
+/* Der Footer liegt innerhalb von .app-wrapper und erbt dessen Theme-Klasse. */
+:global(.dark-mode) .footerNav a {
+  color: var(--accent-on-dark);
+}
+
+:global(.dark-mode) .footerNav a:hover {
+  color: var(--text-color-dark);
 }

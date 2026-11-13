@@ -21,7 +21,6 @@ export default function AccordionList({ items, defaultOpen = true }) {
       <button
         className={styles.toggleAllBtn}
         onClick={toggleAll}
-        aria-label={allExpanded ? "Collapse all" : "Expand all"}
       >
         {allExpanded
           ? (language === "de" ? "Alle einklappen" : "Collapse all")

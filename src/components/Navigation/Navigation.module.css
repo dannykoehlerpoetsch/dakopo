@@ -62,13 +62,22 @@
 .darkMode .link:hover::after {
   width: 100%;
 }
-.lightMode .link:hover,
+.lightMode .link:hover {
+  color: var(--accent-text-light);
+}
+
 .darkMode .link:hover {
-  color: var(--accent-color-light-1);
+  color: var(--accent-on-dark);
 }
 
 .darkMode .link {
   color: var(--text-color-dark);
+}
+
+/* Aktiver Link: der braune Akzent erfuellt auf dem dunklen Header
+   nur 4,1:1 und damit nicht die 4,5:1 fuer 16px-Text. */
+.darkMode .activeLink {
+  color: var(--accent-on-dark);
 }
 
 .lightMode .link {

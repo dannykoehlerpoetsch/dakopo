@@ -17,7 +17,8 @@ export default function NotFound() {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
+    // router ist im App Router eine stabile Referenz, daher als Abhaengigkeit korrekt.
+  }, [router]);
   return (
     <div className={styles.foundWrapper}>
       <Image src={NotFoundImage} alt="Page not found" width={400} height={300} />

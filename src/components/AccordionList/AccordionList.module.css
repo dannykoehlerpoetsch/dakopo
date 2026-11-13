@@ -6,7 +6,7 @@
 .toggleAllBtn {
   background: none;
   border: none;
-  color: var(--secondary-color-light);
+  color: var(--accent-text-light);
   padding: 0.4em 0;
   border-radius: 99vh;
   cursor: pointer;
@@ -18,6 +18,16 @@
 
 .toggleAllBtn:hover {
   color: var(--secondary-color-dark);
+}
+
+/* Der Akzentrichtet sich nach dem Theme der Seite; der Akkordeon-Wrapper
+  liegt innerhalb von .app-wrapper, deshalb greift :global(.dark-mode). */
+:global(.dark-mode) .toggleAllBtn {
+  color: var(--accent-on-dark);
+}
+
+:global(.dark-mode) .toggleAllBtn:hover {
+  color: var(--text-color-dark);
 }
 
 .accordionRoot {

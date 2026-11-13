@@ -24,6 +24,12 @@
   }
 }
 
+/* Auf dunklem Grund bringt das Ziegelrot nur 2,3-2,8:1; die Symbole sind
+   bedeutsame Graphik und brauchen 3:1. */
+:global(.dark-mode) .smLinks a {
+  color: #c0392b;
+}
+
 .mailContact {
   display: flex;
   justify-content: center;
@@ -43,10 +49,14 @@
       background-color: var(--secondary-color-light);
       color: white;
       margin: 1em 0;
-      transition: background-color 0.3s linear;
+      transition:
+        background-color 0.3s linear,
+        color 0.3s linear;
 
       &:hover {
         background-color: var(--accent-color-light-1);
+        /* Weiss auf dem helleren Akzent erreicht nur 3,2:1. */
+        color: var(--text-color-light);
       }
     }
   }
@@ -100,9 +110,14 @@
       cursor: pointer;
       background-color: var(--secondary-color-light);
       color: white;
+      transition:
+        background-color 0.3s linear,
+        color 0.3s linear;
 
       &:hover {
         background-color: var(--accent-color-light-1);
+        /* Weiss auf dem helleren Akzent erreicht nur 3,2:1. */
+        color: var(--text-color-light);
       }
     }
   }
@@ -125,7 +140,7 @@
 }
 
 .errorMessage {
-  background-color: red;
+  background-color: #b91c1c;
   color: white;
 }
 

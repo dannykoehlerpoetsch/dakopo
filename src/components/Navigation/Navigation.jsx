@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { FaHouse, FaCircleInfo, FaGithub, FaAddressCard, FaGear, FaCubesStacked, FaXmark } from "react-icons/fa6";
 import styles from "./Navigation.module.css";
 
-export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
+export default function Navigation({ closeMenu, menuOpen, onOpenSettings }) {
   const links = [
     {
       path: "/",
@@ -51,11 +51,11 @@ export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
         <div className={styles.backdrop} onClick={closeMenu} aria-hidden="true" />
       )}
       <nav
+        id="main-navigation"
         className={`${styles.nav} ${menuOpen ? styles.open : ""} ${
           darkMode ? styles.darkMode : styles.lightMode
         }`}
-        role="navigation"
-        aria-label="Main navigation"
+        aria-label={language === "de" ? "Hauptnavigation" : "Main navigation"}
       >
         <ul
           className={`${styles.navList} ${
@@ -67,7 +67,7 @@ export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
               <button
                 className={styles.closeBtn}
                 onClick={closeMenu}
-                aria-label="Close menu"
+                aria-label={language === "de" ? "Menü schließen" : "close menu"}
               >
                 <FaXmark aria-hidden="true" />
               </button>
@@ -83,7 +83,7 @@ export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
                   className={isActive ? styles.activeLink : styles.link}
                   aria-current={isActive ? "page" : undefined}
                 >
-                  {language === "eng" ? link.name : link.nameDe}{" "}
+                  {language === "de" ? link.nameDe : link.name}{" "}
                   <span aria-hidden="true">{link.icon}</span>
                 </Link>
               </li>
@@ -94,7 +94,7 @@ export default function Navigation({ closeMenu, menuOpen, toggleSettings }) {
               className={styles.link}
               onClick={() => {
                 closeMenu();
-                toggleSettings();
+                onOpenSettings();
               }}
             >
               {language === "de" ? "Einstellungen" : "Settings"}{" "}
